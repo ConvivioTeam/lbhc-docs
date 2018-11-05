@@ -1,0 +1,27 @@
+version: "3"
+services:
+  site:
+    command: jekyll serve
+    image: jekyll/jekyll:latest
+    container_name: "${PROJECT_NAME}_conviviojekyll"
+    volumes:
+      - $PWD:/srv/jekyll
+      - $PWD/vendor/bundle:/usr/local/bundle
+    ports:
+      - 4000:4000
+      - 35729:35729
+      - 3000:3000
+    labels:
+      - 'traefik.backend=conviviojekyll'
+      - 'traefik.port=4000'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+
+  traefik:
+    image: traefik
+    container_name: "${PROJECT_NAME}_traefik"
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '80:80'
+      - '8080:8080' # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
