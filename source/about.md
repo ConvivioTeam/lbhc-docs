@@ -4,16 +4,22 @@ title: About
 permalink: /about/
 nav_order: 2
 ---
+# About this site
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This documentation site is intended for:
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- System builders creating a Directory of Services for Hackney & City of London councils.
+- Developers, adding or improving microservices to the system.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+It documents:
 
+- the components of the system;
+- how they function together;
+- how to work with them;
+- how to deploy them.
 
-[jekyll-organization]: https://github.com/jekyll
+and more.
+
+---
+
+This documentation site is built with the [Jekyll](https://jekyllrb.com/) static site generator and uses the [Just the Docs theme](https://jekyllthemes.io/theme/just-the-docs) ([documentation](https://pmarsceill.github.io/just-the-docs/)).
