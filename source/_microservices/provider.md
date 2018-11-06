@@ -2,6 +2,8 @@
 layout: default
 title: Provider
 parent: Microservices
+nav_order: 2
+permalink: microservices/provider
 ---
 # Provider microservice
 

@@ -2,6 +2,7 @@
 layout: default
 title: Service List
 parent: Microservices
+nav_order: 2
 ---
 # Service List microservice
 
