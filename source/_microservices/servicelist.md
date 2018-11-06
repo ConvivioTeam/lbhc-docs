@@ -7,11 +7,11 @@ parent: Microservices
 
 A listing of services offered by [Providers](/microservices/provider.html).
 
-- **ID**<br />
+- **ID** <br />
   ID number.
-- **Version ID**<br />
+- **Version ID** <br />
   For tracking versioning.
-- **Base URL**<br />
+- **Base URL** <br />
   Base URL for the service API.
-- **Auth**<br />
+- **Auth** <br />
   Details about authentication.

@@ -20,6 +20,8 @@ It documents:
 
 and more.
 
+{{ site.colllections }}
+
 ---
 
 This documentation site is built with the [Jekyll](https://jekyllrb.com/) static site generator and uses the [Just the Docs theme](https://jekyllthemes.io/theme/just-the-docs) ([documentation](https://pmarsceill.github.io/just-the-docs/)).
