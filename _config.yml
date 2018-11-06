@@ -24,9 +24,14 @@ url: "https://convivioteam.github.io" # the base hostname & protocol for your si
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
+
+# The working files and compiled folders.
+source: source
+destination: _site
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -39,3 +44,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Collections
+collections:
+  microservices:
+    output: true
