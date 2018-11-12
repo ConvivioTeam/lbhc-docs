@@ -1,13 +1,19 @@
 language: ruby
+cache: bundler
 rvm:
 - 2.3
-script: "bundle exec jekyll build"
+branches:
+  only:
+  - master
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination _site
 install:
 - bundle install
 - npm install
 deploy:
   provider: pages
   skip-cleanup: true
+  local-dir: ./_site
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
