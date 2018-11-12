@@ -14,7 +14,7 @@ has_children: true
 {% assign infrastructure = site.infrastructure %}
     {% for page in infrastructure %}
     {% if page.permalink != 'infrastructure' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
     {% endif %}
     {% endfor %}
 </ul>
