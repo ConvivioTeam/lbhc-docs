@@ -9,7 +9,7 @@
   "1": {
     "id": "1",
     "title": "Microservices",
-    "content": "A list of the microservices in the system.            Event Stream                        Provider                Service List        ",
+    "content": "A list of the microservices in the system.",
     "url": "/microservices",
     "relUrl": "/microservices"
   },
@@ -37,7 +37,7 @@
   "5": {
     "id": "5",
     "title": "Infrastructure",
-    "content": "@TODO            CI/CD Pipeline                ",
+    "content": "@TODO",
     "url": "/infrastructure",
     "relUrl": "/infrastructure"
   },
