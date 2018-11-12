@@ -1,0 +1,50 @@
+$root-font-size: 16px !default;         // Base font-size for rems
+
+//
+// Spacing
+//
+
+$spacing-unit: 1rem; // 1rem == 16px
+
+$spacers: (
+  sp-0: 0,
+  sp-1: $spacing-unit * 0.25,
+  sp-2: $spacing-unit * 0.5,
+  sp-3: $spacing-unit * 0.75,
+  sp-4: $spacing-unit,
+  sp-5: $spacing-unit * 1.5,
+  sp-6: $spacing-unit * 2,
+  sp-7: $spacing-unit * 2.5,
+  sp-8: $spacing-unit * 3,
+  sp-9: $spacing-unit * 3.5,
+  sp-10: $spacing-unit * 4,
+  sp-11: $spacing-unit * 4.5,
+  sp-12: $spacing-unit * 5,
+  sp-13: $spacing-unit * 5.5,
+  sp-14: $spacing-unit * 6,
+  sp-15: $spacing-unit * 6.5
+) !default;
+
+$sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+$sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+$sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+$sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+$sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+$sp-6: map-get($spacers, sp-6) !default; // 2    rem == 32px
+$sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
+$sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
+$sp-9: map-get($spacers, sp-9) !default; // 4    rem == 56px
+$sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
+$sp-11: map-get($spacers, sp-11) !default; // 4.5 rem == 72px
+$sp-12: map-get($spacers, sp-12) !default; // 5   rem == 80px
+$sp-13: map-get($spacers, sp-13) !default; // 5.5 rem == 88px
+$sp-14: map-get($spacers, sp-14) !default; // 6   rem == 96px
+$sp-15: map-get($spacers, sp-15) !default; // 6.5 rem == 104px
+
+$media-queries: (
+  xs: 320px,
+  sm: 500px,
+  md: 740px,
+  lg: 800px,
+  xl: 1316px
+) !default;

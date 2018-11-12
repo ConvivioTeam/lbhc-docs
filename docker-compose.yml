@@ -7,12 +7,8 @@ services:
     volumes:
       - $PWD:/srv/jekyll
       - $PWD/vendor/bundle:/usr/local/bundle
-    ports:
-      - 4000:4000
-      - 35729:35729
-      - 3000:3000
     labels:
-      - 'traefik.backend=conviviojekyll'
+      - 'traefik.backend=site'
       - 'traefik.port=4000'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
 

@@ -1,0 +1,17 @@
+
+// Support
+@import "./tools/tools";
+
+.site-title {
+    @include mq(md) {
+        height: 140px;
+    }
+}
+
+.navigation {
+    @include mq(md) {
+        padding-top: $sp-14;
+        overflow-y: auto;
+        flex: 1 1 auto;
+    }
+}
