@@ -1,0 +1,12 @@
+---
+---
+{ {% assign pages = site.documents %}{% assign htmlPages = site.html_pages %}{% for page in htmlPages %}{% assign pages = pages | push: page %}{% endfor %}
+  {% for page in pages %}{% if page.url != '/404.html' %}"{{ forloop.index0 }}": {
+    "id": "{{ forloop.index0 }}",
+    "title": "{{ page.title | xml_escape }}",
+    "content": "{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | remove: page.title | strip_newlines | replace: '\', ' '}}",
+    "url": "{{ page.url | xml_escape }}",
+    "relUrl": "{{ page.url | xml_escape }}"
+  }{% if forloop.last %}{% else %},
+  {% endif %}{% endif %}{% endfor %}
+}

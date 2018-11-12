@@ -1,0 +1,33 @@
+{% assign pages_list = site.documents %}
+{% assign htmlPages = site.html_pages %}
+{% for htmlPage in htmlPages %}
+  {% assign pages_list = pages_list | push: htmlPage %}
+{% endfor %}
+{% assign pages_list = pages_list | sort:"nav_order" %}
+<nav>
+    <ul class="navigation-list">
+    {% for node in pages_list %}
+      {% if node.url != '/404.html' %}
+        <li class="navigation-list-item{% if page.url == node.url %} active{% endif %} js-side-nav-item">
+          {% if node.parent == nil or node.has_children == true %}
+          <a href="{{ node.url }}" class="navigation-list-link{% if page.url == node.url or (page.parent != nil and page.parent == node.parent) %} active{% endif %}">{{ node.title }}</a>
+            {% if (node.has_children == true and node.parent == page.parent) %}
+              {% assign children_list = pages_list | sort:"nav_order" %}
+              <ul class="navigation-list-child-list">
+                {% for child in children_list %}
+                  {% if child.url != '/404.html' %}
+                  {% if child.parent and child.parent == node.parent and child.title != node.title %}
+                  <li class="navigation-list-item {% if page.url == child.url %} active{% endif %}">
+                    <a href="{{ child.url }}" class="navigation-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+                  </li>
+                  {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endif %}
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  </nav>
