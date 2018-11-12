@@ -1,5 +1,7 @@
 // Support
-@import "./tools/tools";
+@import 
+    "tools/tools"
+;
 
 .site-title {
     @include mq(md) {
