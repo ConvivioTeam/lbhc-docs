@@ -48,9 +48,14 @@
           {{ content }}
 
           {% if page.has_children == true %}
+          {% assign children_list = site.documents %}
+          {% assign htmlPages = site.html_pages %}
+          {% for htmlPage in htmlPages %}
+            {% assign children_list = children_list | push: htmlPage %}
+          {% endfor %}
+          {% assign children_list = children_list | sort:"nav_order" %}
           <hr>
           <h2 class="text-delta">Table of contents</h2>
-          {% assign children_list = site.pages | sort:"nav_order" %}
           <ul>
             {% for child in children_list %}
               {% if child.parent == page.title and child.title != page.title %}
