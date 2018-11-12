@@ -35,7 +35,7 @@ destination: _site
 
 # Location of SCSS files
 sass:
-    sass_dir: _scss
+    sass_dir: assets/css/_scss
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
