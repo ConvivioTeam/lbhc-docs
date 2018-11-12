@@ -59,3 +59,5 @@ keep_files:
 collections:
   microservices:
     output: true
+  infrastructure:
+    output: true
