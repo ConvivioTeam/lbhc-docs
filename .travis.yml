@@ -2,3 +2,13 @@ language: ruby
 rvm:
 - 2.3
 script: "bundle exec jekyll build"
+install:
+- bundle install
+- npm install
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
