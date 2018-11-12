@@ -27,15 +27,29 @@
     "url": "/microservices/servicelist.html",
     "relUrl": "/microservices/servicelist.html"
   },
+  "4": {
+    "id": "4",
+    "title": "CI/CD Pipeline",
+    "content": "CI and CD is provided by Jenkins.Each job is configured using Jenkins Declarative Pipelines.Pipeline files should be contained within the services repo to allow developers to modify the build process if required.",
+    "url": "/infrastructure/ci-cd-pipeline.html",
+    "relUrl": "/infrastructure/ci-cd-pipeline.html"
+  },
   "5": {
     "id": "5",
+    "title": "Infrastructure",
+    "content": "@TODO            CI/CD Pipeline                ",
+    "url": "/infrastructure",
+    "relUrl": "/infrastructure"
+  },
+  "7": {
+    "id": "7",
     "title": "About",
     "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
-  "6": {
-    "id": "6",
+  "8": {
+    "id": "8",
     "title": "Home",
     "content": "Hackney &amp;amp; City Directory of Services DocumentationDocumentation for the system infrastructure.",
     "url": "/",
