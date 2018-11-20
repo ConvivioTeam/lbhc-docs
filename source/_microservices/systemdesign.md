@@ -19,17 +19,3 @@ The event stream microservice is built on [Apache Kafka](https://kafka.apache.or
   ![Directory of services process model design]({{ image.path | relative_url }})
   {% endif %}
 {% endfor %}
-
-## Microservices and Event Streaming
-
-### Further reading
-
-#### Videos
-
-- Guido Schmutz, Oracle Code 2018 — [Building Event Driven MicroServices with Apache Kafka](https://www.youtube.com/watch?v=llgU1UqL2JQ)
-- Chris Richardson, DockerCon 2016 — [Microservices + Events + Docker = A Perfect Trio](https://www.youtube.com/watch?v=sSm2dRarhPo)
-
-#### Blogs
-
-- ThoughtWorks — [Scaling Microservices with an Event Stream](https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream)
-- Capital One Tech — [Event-Streaming: An Additional Architectural Style to Supplement API Design](https://medium.com/capital-one-tech/event-streaming-an-additional-architectural-style-to-supplement-api-design-703c4f801722)
