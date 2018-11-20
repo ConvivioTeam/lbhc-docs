@@ -29,27 +29,34 @@
   },
   "4": {
     "id": "4",
+    "title": "System Design",
+    "content": " and ArchitectureThe system is designed with a loosely-coupled event-driven microservice architecture. An event stream sits at the core of the architecture as the mode of communication between services. Each microservice includes event sourcing and event creation routines.The event stream microservice is built on Apache Kafka.Design v0.2Microservices and Event StreamingFurther readingVideos  Guido Schmutz, Oracle Code 2018 — Building Event Driven MicroServices with Apache Kafka  Chris Richardson, DockerCon 2016 — Microservices + Events + Docker = A Perfect TrioBlogs  ThoughtWorks — Scaling Microservices with an Event Stream  Capital One Tech — Event-Streaming: An Additional Architectural Style to Supplement API Design",
+    "url": "/microservices/systemdesign",
+    "relUrl": "/microservices/systemdesign"
+  },
+  "5": {
+    "id": "5",
     "title": "CI/CD Pipeline",
     "content": "CI and CD is provided by Jenkins.Each job is configured using Jenkins Declarative Pipelines.Pipeline files should be contained within the services repo to allow developers to modify the build process if required.",
     "url": "/infrastructure/ci-cd-pipeline.html",
     "relUrl": "/infrastructure/ci-cd-pipeline.html"
   },
-  "5": {
-    "id": "5",
+  "6": {
+    "id": "6",
     "title": "Infrastructure",
     "content": "@TODO",
     "url": "/infrastructure",
     "relUrl": "/infrastructure"
   },
-  "7": {
-    "id": "7",
+  "8": {
+    "id": "8",
     "title": "About",
     "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
-  "8": {
-    "id": "8",
+  "9": {
+    "id": "9",
     "title": "Home",
     "content": "Hackney &amp;amp; City Directory of Services DocumentationDocumentation for the system infrastructure.",
     "url": "/",

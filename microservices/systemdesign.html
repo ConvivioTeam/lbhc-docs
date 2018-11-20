@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>API Gateway - Hackney & City Directory of Services Documentation</title>
+    <title>System Design - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/lbhc-docs/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/lbhc-docs/assets/css/styles.css">
     <script type="text/javascript" src="/lbhc-docs/assets/js/vendor/lunr.min.js"></script>
@@ -28,7 +28,7 @@
       
     
       
-        <li class="navigation-list-item js-side-nav-item">
+        <li class="navigation-list-item active js-side-nav-item">
           
         </li>
         
@@ -43,7 +43,7 @@
         
     
       
-        <li class="navigation-list-item active js-side-nav-item">
+        <li class="navigation-list-item js-side-nav-item">
           
         </li>
         
@@ -72,8 +72,8 @@
                 
                   
                   
-                  <li class="navigation-list-item ">
-                    <a href="/lbhc-docs/microservices/systemdesign" class="navigation-list-link">System Design</a>
+                  <li class="navigation-list-item  active">
+                    <a href="/lbhc-docs/microservices/systemdesign" class="navigation-list-link active">System Design</a>
                   </li>
                   
                   
@@ -84,8 +84,8 @@
                 
                   
                   
-                  <li class="navigation-list-item  active">
-                    <a href="/lbhc-docs/microservices/apigateway" class="navigation-list-link active">API Gateway</a>
+                  <li class="navigation-list-item ">
+                    <a href="/lbhc-docs/microservices/apigateway" class="navigation-list-link">API Gateway</a>
                   </li>
                   
                   
@@ -178,25 +178,39 @@
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
                 <li class="breadcrumb-nav-list-item"><a href="lbhc-docs/microservices">Microservices</a></li>
-                <li class="breadcrumb-nav-list-item"><span>API Gateway</span></li>
+                <li class="breadcrumb-nav-list-item"><span>System Design</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="api-gateway-microservice">API Gateway microservice</h1>
+          <h1 id="system-design-and-architecture">System Design and Architecture</h1>
 
-<p>The API Gateway microservice provides the interface from the public internet into the Directory of Services system. Its main function is handle RESTful requests from outside the system, pass the request (and associated data, as appropriate) into the event stream, and then consume appropriate response(s) in the event stream and handle sending that back in the HTTP reponse.</p>
+<p>The system is designed with a loosely-coupled event-driven microservice architecture. An event stream sits at the core of the architecture as the mode of communication between services. Each microservice includes event sourcing and event creation routines.</p>
 
-<h2 id="repository">Repository</h2>
+<p>The event stream microservice is built on <a href="https://kafka.apache.org/">Apache Kafka</a>.</p>
 
-<p>Code for the DoS API Gateway microservice is in the https://github.com/LBHackney-IT/DoS-api-gateway repository.</p>
+<p><strong>Design v0.2</strong></p>
 
-<h2 id="api-spec-doc">API Spec doc</h2>
+<p><img src="/assets/images/microservices/dos-process-model-v0.2.png" alt="Directory of services process model design" /></p>
 
-<p>View the spec at SwaggerHub (@todo – swaggerhub link).</p>
+<h2 id="microservices-and-event-streaming">Microservices and Event Streaming</h2>
 
-<p>View the raw spec document at https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml</p>
+<h3 id="further-reading">Further reading</h3>
+
+<h4 id="videos">Videos</h4>
+
+<ul>
+  <li>Guido Schmutz, Oracle Code 2018 — <a href="https://www.youtube.com/watch?v=llgU1UqL2JQ">Building Event Driven MicroServices with Apache Kafka</a></li>
+  <li>Chris Richardson, DockerCon 2016 — <a href="https://www.youtube.com/watch?v=sSm2dRarhPo">Microservices + Events + Docker = A Perfect Trio</a></li>
+</ul>
+
+<h4 id="blogs">Blogs</h4>
+
+<ul>
+  <li>ThoughtWorks — <a href="https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream">Scaling Microservices with an Event Stream</a></li>
+  <li>Capital One Tech — <a href="https://medium.com/capital-one-tech/event-streaming-an-additional-architectural-style-to-supplement-api-design-703c4f801722">Event-Streaming: An Additional Architectural Style to Supplement API Design</a></li>
+</ul>
 
 
           
