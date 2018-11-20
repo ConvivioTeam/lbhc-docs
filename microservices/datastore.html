@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Provider - Hackney & City Directory of Services Documentation</title>
+    <title>Data Store - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/lbhc-docs/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/lbhc-docs/assets/css/styles.css">
     <script type="text/javascript" src="/lbhc-docs/assets/js/vendor/lunr.min.js"></script>
@@ -37,6 +37,12 @@
         
     
       
+        <li class="navigation-list-item active js-side-nav-item">
+          
+        </li>
+        
+    
+      
         <li class="navigation-list-item js-side-nav-item">
           
         </li>
@@ -58,6 +64,14 @@
                 
                   
                   
+                  <li class="navigation-list-item  active">
+                    <a href="/lbhc-docs/microservices/datastore" class="navigation-list-link active">Data Store</a>
+                  </li>
+                  
+                  
+                
+                  
+                  
                   <li class="navigation-list-item ">
                     <a href="/lbhc-docs/microservices/eventstream.html" class="navigation-list-link">Event Stream</a>
                   </li>
@@ -65,22 +79,6 @@
                   
                 
                   
-                  
-                  
-                
-                  
-                  
-                  <li class="navigation-list-item  active">
-                    <a href="/lbhc-docs/microservices/provider" class="navigation-list-link active">Provider</a>
-                  </li>
-                  
-                  
-                
-                  
-                  
-                  <li class="navigation-list-item ">
-                    <a href="/lbhc-docs/microservices/servicelist.html" class="navigation-list-link">Service List</a>
-                  </li>
                   
                   
                 
@@ -98,18 +96,6 @@
                 
               </ul>
             
-          
-        </li>
-        
-    
-      
-        <li class="navigation-list-item active js-side-nav-item">
-          
-        </li>
-        
-    
-      
-        <li class="navigation-list-item js-side-nav-item">
           
         </li>
         
@@ -164,27 +150,35 @@
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
                 <li class="breadcrumb-nav-list-item"><a href="lbhc-docs/microservices">Microservices</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Provider</span></li>
+                <li class="breadcrumb-nav-list-item"><span>Data Store</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="provider-microservice">Provider microservice</h1>
+          <h1 id="data-store-microservice">Data store microservice</h1>
 
-<p>Contains basic information about a provider.</p>
+<p>Stores and retrieves the data of the directory of service.</p>
+
+<p>Contains data for:</p>
 
 <ul>
-  <li><strong>ID</strong> <br />
-ID number.</li>
-  <li><strong>Version ID</strong> <br />
-For tracking versioning.</li>
-  <li><strong>Name</strong> <br />
-The human-friendly title or label of the provider.</li>
-  <li><strong>Machine name</strong> <br />
-A unique machine name, which may be useful non-numeric lookups by humans.</li>
-  <li><strong>Contact info</strong> <br />
-May need some contact details that are not tied to a person at a provider organisation.</li>
+  <li><strong>Providers</strong></li>
+  <li><strong>Services</strong></li>
+  <li><strong>Eligibility</strong></li>
+  <li><strong>Cost options</strong></li>
+  <li><strong>Events</strong>, including attending info</li>
+  <li><strong>Contacts</strong></li>
+  <li><strong>Venues</strong></li>
+  <li><strong>Taxonomy</strong>, including
+    <ul>
+      <li>category</li>
+      <li>function</li>
+      <li>type</li>
+      <li>deliverable type</li>
+      <li>tag</li>
+    </ul>
+  </li>
 </ul>
 
 
