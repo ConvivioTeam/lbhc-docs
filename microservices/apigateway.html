@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Data Store - Hackney & City Directory of Services Documentation</title>
+    <title>API Gateway - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/lbhc-docs/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/lbhc-docs/assets/css/styles.css">
     <script type="text/javascript" src="/lbhc-docs/assets/js/vendor/lunr.min.js"></script>
@@ -37,13 +37,13 @@
         
     
       
-        <li class="navigation-list-item js-side-nav-item">
+        <li class="navigation-list-item active js-side-nav-item">
           
         </li>
         
     
       
-        <li class="navigation-list-item active js-side-nav-item">
+        <li class="navigation-list-item js-side-nav-item">
           
         </li>
         
@@ -70,16 +70,16 @@
                 
                   
                   
-                  <li class="navigation-list-item ">
-                    <a href="/lbhc-docs/microservices/apigateway" class="navigation-list-link">API Gateway</a>
+                  <li class="navigation-list-item  active">
+                    <a href="/lbhc-docs/microservices/apigateway" class="navigation-list-link active">API Gateway</a>
                   </li>
                   
                   
                 
                   
                   
-                  <li class="navigation-list-item  active">
-                    <a href="/lbhc-docs/microservices/datastore" class="navigation-list-link active">Data Store</a>
+                  <li class="navigation-list-item ">
+                    <a href="/lbhc-docs/microservices/datastore" class="navigation-list-link">Data Store</a>
                   </li>
                   
                   
@@ -164,36 +164,25 @@
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
                 <li class="breadcrumb-nav-list-item"><a href="lbhc-docs/microservices">Microservices</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Data Store</span></li>
+                <li class="breadcrumb-nav-list-item"><span>API Gateway</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="data-store-microservice">Data store microservice</h1>
+          <h1 id="api-gateway-microservice">API Gateway microservice</h1>
 
-<p>Stores and retrieves the data of the directory of service.</p>
+<p>The API Gateway microservice provides the interface from the public internet into the Directory of Services system. Its main function is handle RESTful requests from outside the system, pass the request (and associated data, as appropriate) into the event stream, and then consume appropriate response(s) in the event stream and handle sending that back in the HTTP reponse.</p>
 
-<p>Contains data for:</p>
+<h2 id="repository">Repository</h2>
 
-<ul>
-  <li><strong>Providers</strong></li>
-  <li><strong>Services</strong></li>
-  <li><strong>Eligibility</strong></li>
-  <li><strong>Cost options</strong></li>
-  <li><strong>Events</strong>, including attending info</li>
-  <li><strong>Contacts</strong></li>
-  <li><strong>Venues</strong></li>
-  <li><strong>Taxonomy</strong>, including
-    <ul>
-      <li>category</li>
-      <li>function</li>
-      <li>type</li>
-      <li>deliverable type</li>
-      <li>tag</li>
-    </ul>
-  </li>
-</ul>
+<p>Code for the DoS API Gateway microservice is in the https://github.com/LBHackney-IT/DoS-api-gateway repository.</p>
+
+<h2 id="api-spec-doc">API Spec doc</h2>
+
+<p>View the spec at SwaggerHub (@todo – swaggerhub link).</p>
+
+<p>View the raw spec document at https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml</p>
 
 
           
