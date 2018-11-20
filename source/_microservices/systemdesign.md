@@ -14,7 +14,7 @@ The event stream microservice is built on [Apache Kafka](https://kafka.apache.or
 
 **Design v0.2**
 
-![Directory of services process model design](/assets/images/microservices/dos-process-model-v0.2.png)
+![Directory of services process model design]({{ site.baseurl }}/assets/images/microservices/dos-process-model-v0.2.png)
 
 ## Microservices and Event Streaming
 
