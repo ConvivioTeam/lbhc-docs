@@ -9,7 +9,7 @@
   "1": {
     "id": "1",
     "title": "Data Store",
-    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events, including attending info  Contacts  Venues  Taxonomy, including          category      function      type      deliverable type      tag      RepositoryCode for the DoS API Gateway microservice is in the https://github.com/LBHackney-IT/DoS-api-gateway repository.API Spec docView the spec at SwaggerHub (@todo – swaggerhub link).View the raw spec document at https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml",
+    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events, including attending info  Contacts  Venues  Taxonomy, including          category      function      type      deliverable type      tag      RepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.",
     "url": "/microservices/datastore",
     "relUrl": "/microservices/datastore"
   },
@@ -30,7 +30,7 @@
   "4": {
     "id": "4",
     "title": "Scraper",
-    "content": " MicroserviceThe scraper microservice pulls in data from external data sources. It is built with a plug-in architecture, so that scapers or crawlers for a variety of external sources can be created.Once data has been scraped, it should be put into the system event stream to create or update entries in the data store.",
+    "content": " MicroserviceThe scraper microservice pulls in data from external data sources. It is built with a plug-in architecture, so that scapers or crawlers for a variety of external sources can be created.Once data has been scraped, it should be put into the system event stream to create or update entries in the data store.RepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-scraper-service repository.",
     "url": "/microservices/scraper",
     "relUrl": "/microservices/scraper"
   },
