@@ -12,6 +12,6 @@ The scraper microservice pulls in data from external data sources. It is built w
 
 Once data has been scraped, it should be put into the system [event stream](./eventstream) to create or update entries in the [data store](./datastore).
 
-## About
+## Repository
 
-**Codebase:** https://github.com/LBHackney-IT/DoS-scraper-service
+Code for the DoS Scraper microservice is in the https://github.com/LBHackney-IT/DoS-scraper-service repository.
