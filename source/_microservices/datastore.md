@@ -27,4 +27,4 @@ Contains data for:
 
 ## Repository
 
-Code for the DoS Data Store microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.
+Code for the DoS Data Store microservice is in the [https://github.com/LBHackney-IT/DoS-data-store-service](https://github.com/LBHackney-IT/DoS-data-store-service) repository.

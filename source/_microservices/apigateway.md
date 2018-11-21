@@ -11,10 +11,10 @@ The API Gateway microservice provides the interface from the public internet int
 
 ## Repository
 
-Code for the DoS API Gateway microservice is in the https://github.com/LBHackney-IT/DoS-api-gateway repository.
+Code for the DoS API Gateway microservice is in the [https://github.com/LBHackney-IT/DoS-api-gateway](https://github.com/LBHackney-IT/DoS-api-gateway) repository.
 
 ## API Spec doc
 
 View the spec at SwaggerHub (@todo – swaggerhub link).
 
-View the raw spec document at https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml
+View the raw spec document at [https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml](https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml)

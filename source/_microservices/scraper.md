@@ -14,4 +14,4 @@ Once data has been scraped, it should be put into the system [event stream](./ev
 
 ## Repository
 
-Code for the DoS Scraper microservice is in the https://github.com/LBHackney-IT/DoS-scraper-service repository.
+Code for the DoS Scraper microservice is in the [https://github.com/LBHackney-IT/DoS-scraper-service](https://github.com/LBHackney-IT/DoS-scraper-service) repository.
