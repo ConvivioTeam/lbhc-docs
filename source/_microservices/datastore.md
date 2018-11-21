@@ -27,10 +27,4 @@ Contains data for:
 
 ## Repository
 
-Code for the DoS API Gateway microservice is in the https://github.com/LBHackney-IT/DoS-api-gateway repository.
-
-## API Spec doc
-
-View the spec at SwaggerHub (@todo – swaggerhub link).
-
-View the raw spec document at https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml
+Code for the DoS Data Store microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.
