@@ -17,8 +17,8 @@
     "id": "2",
     "title": "Event Stream",
     "content": " MicroserviceThe event stream is the heart of the microservice ecosystem.Built on Apache Kafka, the event stream allows each microservice to function independently of the next, simply waiting for an appropriate event in the event stream to trigger an action. Once it has completed its action, if appropriate, it may put an event back into the event stream to trigger a downstream or dependent microservice.This sequence allows microservices to function without causing dependency failures. I.e. a failure in one microservice should not be allowed cause the whole system to fail or to cause cascading errors.Each microservice will need to include an event sourcing sub-system to respond to relevant events in the event stream for the microservice.There are many code libraries available for interacting with Apache Kafka.Microservices and ingFurther readingVideos  Guido Schmutz, Oracle Code 2018 — Building Event Driven MicroServices with Apache Kafka  Chris Richardson, DockerCon 2016 — Microservices + Events + Docker = A Perfect TrioBlogs  ThoughtWorks — Scaling Microservices with an   Capital One Tech — Event-Streaming: An Additional Architectural Style to Supplement API Design",
-    "url": "/microservices/eventstream.html",
-    "relUrl": "/microservices/eventstream.html"
+    "url": "/microservices/eventstream",
+    "relUrl": "/microservices/eventstream"
   },
   "3": {
     "id": "3",
@@ -29,34 +29,41 @@
   },
   "4": {
     "id": "4",
+    "title": "Scraper",
+    "content": " MicroserviceThe scraper microservice pulls in data from external data sources. It is built with a plug-in architecture, so that scapers or crawlers for a variety of external sources can be created.Once data has been scraped, it should be put into the system event stream to create or update entries in the data store.",
+    "url": "/microservices/scraper",
+    "relUrl": "/microservices/scraper"
+  },
+  "5": {
+    "id": "5",
     "title": "System Design",
     "content": " and ArchitectureThe system is designed with a loosely-coupled event-driven microservice architecture. An event stream sits at the core of the architecture as the mode of communication between services. Each microservice includes event sourcing and event creation routines.The event stream microservice is built on Apache Kafka.Design v0.2",
     "url": "/microservices/systemdesign",
     "relUrl": "/microservices/systemdesign"
   },
-  "5": {
-    "id": "5",
+  "6": {
+    "id": "6",
     "title": "CI/CD Pipeline",
     "content": "CI and CD is provided by Jenkins.Each job is configured using Jenkins Declarative Pipelines.Pipeline files should be contained within the services repo to allow developers to modify the build process if required.",
     "url": "/infrastructure/ci-cd-pipeline.html",
     "relUrl": "/infrastructure/ci-cd-pipeline.html"
   },
-  "6": {
-    "id": "6",
+  "7": {
+    "id": "7",
     "title": "Infrastructure",
     "content": "@TODO",
     "url": "/infrastructure",
     "relUrl": "/infrastructure"
   },
-  "8": {
-    "id": "8",
+  "9": {
+    "id": "9",
     "title": "About",
     "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
-  "9": {
-    "id": "9",
+  "10": {
+    "id": "10",
     "title": "Home",
     "content": "Hackney &amp;amp; City Directory of Services DocumentationDocumentation for the system infrastructure.",
     "url": "/",
