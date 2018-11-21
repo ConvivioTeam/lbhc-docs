@@ -3,6 +3,7 @@ layout: default
 title: Event Stream
 parent: Microservices
 nav_order: 2
+permalink: microservices/eventstream
 ---
 # Event Stream Microservice
 

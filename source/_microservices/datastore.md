@@ -2,7 +2,7 @@
 layout: default
 title: Data Store
 parent: Microservices
-nav_order: 2
+nav_order: 3
 permalink: microservices/datastore
 ---
 # Data store microservice
