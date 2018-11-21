@@ -11,3 +11,7 @@ permalink: microservices/scraper
 The scraper microservice pulls in data from external data sources. It is built with a plug-in architecture, so that scapers or crawlers for a variety of external sources can be created.
 
 Once data has been scraped, it should be put into the system [event stream](./eventstream) to create or update entries in the [data store](./datastore).
+
+## About
+
+**Codebase:** https://github.com/LBHackney-IT/DoS-scraper-service
