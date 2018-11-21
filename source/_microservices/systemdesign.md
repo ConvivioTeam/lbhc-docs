@@ -14,8 +14,5 @@ The event stream microservice is built on [Apache Kafka](https://kafka.apache.or
 
 **Design v0.2**
 
-{% for image in site.static_files %}
-  {% if image.path contains 'assets/images/microservices/dos-process-model' %}
-  ![Directory of services process model design]({{ image.path | relative_url }})
-  {% endif %}
-{% endfor %}
+  ![Directory of services process model design]({{ 'assets/images/microservices/dos-process-model-v0.2.png' | relative_url }})
+ 
