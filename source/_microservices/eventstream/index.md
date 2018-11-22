@@ -2,6 +2,7 @@
 layout: default
 title: Event Stream
 parent: Microservices
+has_children: true
 nav_order: 2
 permalink: microservices/eventstream
 ---
@@ -30,3 +31,4 @@ There are many code libraries available for interacting with Apache Kafka.
 
 - ThoughtWorks — [Scaling Microservices with an Event Stream](https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream)
 - Capital One Tech — [Event-Streaming: An Additional Architectural Style to Supplement API Design](https://medium.com/capital-one-tech/event-streaming-an-additional-architectural-style-to-supplement-api-design-703c4f801722)
+
