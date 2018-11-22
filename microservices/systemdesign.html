@@ -204,10 +204,38 @@
 
 <p>The event stream microservice is built on <a href="https://kafka.apache.org/">Apache Kafka</a>.</p>
 
-<p><strong>Design v0.2</strong></p>
+<h2 id="loosley-coupled">Loosley-coupled</h2>
+
+<h3 id="bad-bad-not-good">Bad, bad, not good</h3>
+
+<p>In a <em>close-coupled</em> microservice system design, individual microservices can call APIs on each other, making the functioning of one microservice dependent on the functioning of one or many others. A problem with an upstream microservice can cause the current microservice to fail, allowing others downstream to fail also.</p>
+
+<h3 id="better">Better</h3>
+
+<p><em>Loosely-coupling</em> microservices removes that dependency.</p>
+
+<p>Instead, each microservice publishes events to a shared event store or event stream when it completes a task or its state changes. At the same time, the microservice subscribes to events in the event store, which may trigger it to perform actions.</p>
+
+<p>This means that each transaction may take the form of a <a href="https://microservices.io/patterns/data/saga.html">saga</a>, a sequence of local transactions. Each local transaction updates the performs an action or updates the state of an item (such as saving to a database) and publishes a message or event to trigger the next local transaction in the saga.  Failure can be handled with a series of compensating actions that undo any changes made by preceding local transactions.</p>
+
+<h3 id="command-query-responsibility-segregation-cqrs">Command Query Responsibility Segregation (CQRS)</h3>
+
+<p>This allows the two sets of actions to be segregated effectively into two parts: the command-side and the query-side.</p>
+
+<p><strong>Command actions:</strong> Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.
+<strong>Query actions:</strong> handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.</p>
+
+<h2 id="design-v02">Design (v0.2)</h2>
+
+<h3 id="design-schematics">Design schematics</h3>
+
+<h4 id="process-design">Process design</h4>
 
 <p><img src="/lbhc-docs/assets/images/microservices/dos-process-model-v0.2.png" alt="Directory of services process model design" /></p>
 
+<h4 id="system-design">System design</h4>
+
+<p><img src="/lbhc-docs/assets/images/microservices/dos-system-model-v0.1.png" alt="Directory of services system model design" /></p>
 
 
           
