@@ -30,8 +30,8 @@ This means that each transaction may take the form of a [saga](https://microserv
 
 This allows the two sets of actions to be segregated effectively into two parts: the command-side and the query-side.
 
-**Command actions:** Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.
-**Query actions:** handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.
+- **Command actions:** Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.
+- **Query actions:** handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.
 
 ## Design (v0.2)
 
