@@ -222,8 +222,10 @@
 
 <p>This allows the two sets of actions to be segregated effectively into two parts: the command-side and the query-side.</p>
 
-<p><strong>Command actions:</strong> Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.
-<strong>Query actions:</strong> handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.</p>
+<ul>
+  <li><strong>Command actions:</strong> Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.</li>
+  <li><strong>Query actions:</strong> handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.</li>
+</ul>
 
 <h2 id="design-v02">Design (v0.2)</h2>
 
