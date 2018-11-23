@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title> - Hackney & City Directory of Services Documentation</title>
+    <title>Event Sourcing - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/lbhc-docs/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/lbhc-docs/assets/css/styles.css">
     <script type="text/javascript" src="/lbhc-docs/assets/js/vendor/lunr.min.js"></script>
@@ -30,7 +30,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="" class="navigation-list-link"></a>
                 
@@ -40,7 +40,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="" class="navigation-list-link"></a>
                 
@@ -50,9 +50,9 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
-                <a href="/lbhc-docs/404.html" class="navigation-list-link active"></a>
+                <a href="/lbhc-docs/404.html" class="navigation-list-link"></a>
                 
             </li>
             
@@ -104,7 +104,7 @@
         
         
             
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/lbhc-docs/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -138,7 +138,7 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
                         <a href="/lbhc-docs/microservices/eventstream" class="navigation-list-link">Event Stream</a>
                         
@@ -152,8 +152,8 @@
                                 
                             
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/lbhc-docs/microservices/eventstream/eventsourcing" class="navigation-list-link">Event Sourcing</a>
+                                <li class="navigation-list-item  active">
+                                    <a href="/lbhc-docs/microservices/eventstream/eventsourcing" class="navigation-list-link active">Event Sourcing</a>
                                 </li>
                                 
                             
@@ -289,28 +289,47 @@
       <div class="main-content">
         
           
+          
+          
+          
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                <li class="breadcrumb-nav-list-item"><a href="/lbhc-docs/microservices">Microservices</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><a href="/lbhc-docs/microservices/eventstream">Event Stream</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Event Sourcing</span></li>
+              </ol>
+            </nav>
+          
         
         <div class="page-content">
-          <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+          <h1 id="event-sourcing-consuming-and-publishing-events">Event Sourcing: Consuming and Publishing Events</h1>
 
-<div class="container">
-  <h1>404</h1>
+<p>Each microservice will need to source events from the event stream.</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<p>If an app is built with Laravel, as most of the microservices will be, then it will need to use a library to work with the Kafka-powered event stream.</p>
+
+<h2 id="php-kafka-libraries">PHP Kafka libraries</h2>
+
+<p>This project looks like it could be a useful driver to add to a Laravel Lumen microservice:</p>
+
+<ul>
+  <li>Kafka Queue driver for Laravel: <a href="https://github.com/rapideinternet/laravel-queue-kafka">https://github.com/rapideinternet/laravel-queue-kafka</a></li>
+</ul>
+
+<p><strong>Supported versions of Laravel</strong>
+Tested on: [5.4, 5.5, 5.6, 5.7]</p>
+
+<h3 id="alternatives">Alternatives</h3>
+
+<p>See also:</p>
+
+<ul>
+  <li><a href="https://github.com/arquivei/laravel-kafka-queue-connector">https://github.com/arquivei/laravel-kafka-queue-connector</a></li>
+  <li><a href="https://github.com/Superbalist/php-pubsub-kafka">https://github.com/Superbalist/php-pubsub-kafka</a></li>
+</ul>
 
 
           

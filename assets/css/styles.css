@@ -1,1 +1,9 @@
-@media (min-width: 46.25rem){.site-title{height:140px}}@media (min-width: 46.25rem){.navigation{padding-top:6rem;overflow-y:auto;flex:1 1 auto}}
+@media (min-width: 46.25rem) {
+  .site-title {
+    height: 140px; } }
+
+@media (min-width: 46.25rem) {
+  .navigation {
+    padding-top: 6rem;
+    overflow-y: auto;
+    flex: 1 1 auto; } }
