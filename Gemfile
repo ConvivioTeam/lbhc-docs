@@ -8,12 +8,12 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", group: :jekyll_plugins
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
 # Using the 'Just the Docs' theme for Jekyll: https://github.com/pmarsceill/just-the-docs
-gem "just-the-docs"
+gem "just-the-docs", "~> 0.2.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
