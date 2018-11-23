@@ -2,19 +2,9 @@
 layout: default
 title: Infrastructure
 permalink: infrastructure
-nav_order: 3
-parent: Infrastructure
+nav_order: 4
 has_children: true
 ---
 # Infrastructure
 
 @TODO
-
-<ul>
-{% assign infrastructure = site.infrastructure %}
-    {% for page in infrastructure %}
-    {% if page.permalink != 'infrastructure' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endif %}
-    {% endfor %}
-</ul>
