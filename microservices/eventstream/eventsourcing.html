@@ -311,7 +311,22 @@
 
 <p>If an app is built with Laravel, as most of the microservices will be, then it will need to use a library to work with the Kafka-powered event stream.</p>
 
-<h2 id="php-kafka-libraries">PHP Kafka libraries</h2>
+<h2 id="event-sourcing-and-laravel-queues">Event Sourcing and Laravel Queues</h2>
+
+<p>Laravel has an effective system for managing <a href="https://laravel.com/docs/master/queues">queues</a> so Lumen, based on Laravel, can use the queue API.</p>
+
+<h3 id="running-the-queue-worker">Running the Queue Worker</h3>
+
+<p class="fs-2">(excerpt from Laravel queue docs on <a href="https://laravel.com/docs/master/queues#running-the-queue-worker">running the queue worker</a>)</p>
+
+<p>Laravel includes a queue worker that will process new jobs as they are pushed onto the queue. You may run the worker using the queue:work Artisan command. Note that once the  queue:work command has started, it will continue to run until it is manually stopped or you close your terminal:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ php artisan queue:work
+</code></pre></div></div>
+
+<p class="alert alert-primary">To keep the <code class="highlighter-rouge">queue:work</code> process running permanently in the background, you should use a process monitor such as <a href="https://laravel.com/docs/master/queues#supervisor-configuration">Supervisor</a> to ensure that the queue worker does not stop running.</p>
+
+<h2 id="php--kafka-libraries">PHP + Kafka Libraries</h2>
 
 <p>This project looks like it could be a useful driver to add to a Laravel Lumen microservice:</p>
 

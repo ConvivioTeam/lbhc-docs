@@ -1,3 +1,70 @@
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.alert-heading {
+  color: inherit; }
+
+.alert-link {
+  font-weight: 700; }
+
+.alert-primary {
+  color: #153778;
+  background-color: #d4e1fa;
+  border-color: #c3d5f8; }
+  .alert-primary hr {
+    border-top-color: #acc5f5; }
+  .alert-primary .alert-link {
+    color: #0d234d; }
+
+.alert-secondary {
+  color: #232328;
+  background-color: #dad9db;
+  border-color: #cbcacd; }
+  .alert-secondary hr {
+    border-top-color: #bebdc1; }
+  .alert-secondary .alert-link {
+    color: #0b0b0d; }
+
+.alert-success {
+  color: #095e45;
+  background-color: #cff0e6;
+  border-color: #bceadd; }
+  .alert-success hr {
+    border-top-color: #a9e4d3; }
+  .alert-success .alert-link {
+    color: #052f23; }
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb; }
+  .alert-info hr {
+    border-top-color: #abdde5; }
+  .alert-info .alert-link {
+    color: #062c33; }
+
+.alert-warning {
+  color: #806d18;
+  background-color: #fdf6d5;
+  border-color: #fdf2c4; }
+  .alert-warning hr {
+    border-top-color: #fcedab; }
+  .alert-warning .alert-link {
+    color: #554810; }
+
+.alert-danger {
+  color: #792828;
+  background-color: #fbdbdb;
+  border-color: #f9cdcd; }
+  .alert-danger hr {
+    border-top-color: #f6b6b6; }
+  .alert-danger .alert-link {
+    color: #531b1b; }
+
 @media (min-width: 46.25rem) {
   .site-title {
     height: 140px; } }
