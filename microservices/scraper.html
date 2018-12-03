@@ -317,6 +317,8 @@
 
 <p>There are thus two basic plugin sets. Each is an abstract base class, so that it can be extended for a particular source, for example, where a different authentication key or method is required for access.</p>
 
+<p>These base plugins are found in <code class="highlighter-rouge">namespace App\Plugins</code> in <code class="highlighter-rouge">./source/app/Plugins</code>. These plugins search for implementations in <code class="highlighter-rouge">namespace App\Scraper</code> in <code class="highlighter-rouge">./source/app/Scraper</code>.</p>
+
 <h3 id="1-web-page-scrapers">1. Web Page scrapers</h3>
 
 <p>These are scrapers that make an HTTP GET request for a web page and then parse the page content to find the specific element on the page, e.g. using a CSS selector.</p>
@@ -331,6 +333,25 @@
 
 <p>Each individual source scraper should then <code class="highlighter-rouge">extends WebPageScraper</code> to be identifiable and able to function as a web page scraper.</p>
 
+<h4 id="example">Example</h4>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Scraper\ICareWebPageScraper</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Plugins\WebPageScraper\Scraper\WebPageScraper</span><span class="p">;</span>
+
+<span class="sd">/**
+ * A scraper for the Hackney iCare website.
+ *
+ * @package App\Scraper\ICareWebPageScraper
+ */</span>
+<span class="k">class</span> <span class="nc">ICareWebPageScraperPlugin</span> <span class="k">extends</span> <span class="nx">WebPageScraper</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <h3 id="2-api-scrapers">2. API scrapers</h3>
 
 <p>These are scrapers that make HTTP GET (and possibly POST requests) for API resource endpoints and retrieve JSON (or XML) data in response.</p>
@@ -342,6 +363,25 @@
 </code></pre></div></div>
 
 <p>Each individual source scraper should then <code class="highlighter-rouge">extends ApiScraper</code> to be identifiable and able to function as an API scraper.</p>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Scraper\iCareOpenObjectsScraper</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Plugins\ApiScraper\Scraper\ApiScraperInterface</span><span class="p">;</span>
+
+<span class="sd">/**
+ * A scraper for iCare Open Objects.
+ *
+ * @package App\Scraper\iCareOpenObjectsScraper
+ */</span>
+<span class="k">class</span> <span class="nc">iCareOpenObjectsScraperPlugin</span> <span class="k">implements</span> <span class="nx">ApiScraperInterface</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="event-sourcing">Event Sourcing</h2>
 
