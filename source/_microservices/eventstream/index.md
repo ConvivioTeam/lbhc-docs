@@ -16,7 +16,8 @@ This sequence allows microservices to function without causing dependency failur
 
 Each microservice will need to include an event sourcing sub-system to respond to relevant events in the event stream for the microservice.
 
-There are many code libraries available for interacting with Apache Kafka.
+{: .alert .alert-primary }
+There are many code libraries available for interacting with Apache Kafka. Read the documentation on [event sourcing](./eventsourcing) for more.
 
 ## Microservices and Event Streaming
 
