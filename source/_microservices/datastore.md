@@ -28,3 +28,11 @@ Contains data for:
 ## Repository
 
 Code for the DoS Data Store microservice is in the [https://github.com/LBHackney-IT/DoS-data-store-service](https://github.com/LBHackney-IT/DoS-data-store-service) repository.
+
+## Functionality
+
+This service provide the following functionality:
+
+* Creation of production and development databases
+* Migration handler for database updates
+* Model and Object definitions
