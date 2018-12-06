@@ -9,7 +9,7 @@
   "1": {
     "id": "1",
     "title": "Data Store",
-    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events, including attending info  Contacts  Venues  Taxonomy, including          category      function      type      deliverable type      tag      RepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.",
+    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events, including attending info  Contacts  Venues  Taxonomy, including          category      function      type      deliverable type      tag      RepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.FunctionalityThis service provide the following functionality:  Creation of production and development databases  Migration handler for database updates  Model and Object definitions",
     "url": "/microservices/datastore",
     "relUrl": "/microservices/datastore"
   },
