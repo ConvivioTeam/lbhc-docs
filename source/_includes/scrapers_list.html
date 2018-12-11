@@ -1,0 +1,7 @@
+<ul>
+{% for scraper in site.microservices %}
+{% if scraper.category == 'scraper' and scraper.parent == page.title %}
+    <li><a href="{{ scraper.url | relative_url }}">{{ scraper.title }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>

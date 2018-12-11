@@ -2,6 +2,7 @@
 layout: default
 title: Scraper
 parent: Microservices
+has_children: true
 nav_order: 3
 permalink: microservices/scraper
 ---
@@ -12,7 +13,21 @@ The scraper microservice pulls in data from external data sources. It is built w
 
 Once data has been scraped, it should be put into the system [event stream](./eventstream) to create or update entries in the [data store](./datastore).
 
+## Requirements
+
+[System requirements](./requirements) for this microservice are set out separately.
+
+## Deployment
+
+[Deployment processes](./deployment) for this microservice are set out separately.
+
 {% include_relative include-plugins.md %}
+
+## Scrapers
+
+Specific documentation about each scraper tool in the Scraper microservice:
+
+{% include scrapers_list.html %}
 
 {% include_relative include-event-sourcing.md %}
 
