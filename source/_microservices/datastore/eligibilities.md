@@ -3,7 +3,7 @@ layout: default
 title: Eligitbilities
 parent: Data Store
 grand_parent: Microservices
-nav_order: 3
+nav_order: 2
 permalink: microservices/datastore/eligibilities
 ---
 
