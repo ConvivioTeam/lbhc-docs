@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Event Stream - Hackney & City Directory of Services Documentation</title>
+    <title>Services - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -30,7 +30,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="" class="navigation-list-link"></a>
                 
@@ -40,7 +40,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="" class="navigation-list-link"></a>
                 
@@ -50,7 +50,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="/404.html" class="navigation-list-link"></a>
                 
@@ -180,9 +180,9 @@
                     
                     
                     
-                        <li class="navigation-list-item  active">
+                        <li class="navigation-list-item ">
                         
-                        <a href="/microservices/eventstream" class="navigation-list-link active">Event Stream</a>
+                        <a href="/microservices/eventstream" class="navigation-list-link">Event Stream</a>
                         
                             
                             <ul class="navigation-list-child-list">
@@ -253,7 +253,7 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
                         <a href="/microservices/datastore" class="navigation-list-link">Data Store</a>
                         
@@ -273,8 +273,8 @@
                                 
                             
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/services" class="navigation-list-link">Services</a>
+                                <li class="navigation-list-item  active">
+                                    <a href="/microservices/datastore/services" class="navigation-list-link active">Services</a>
                                 </li>
                                 
                             
@@ -474,104 +474,81 @@
               <ol class="breadcrumb-nav-list">
                 
                 <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Event Stream</span></li>
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices/datastore">Data Store</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Services</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="event-stream-microservice">Event Stream Microservice</h1>
+          <h1 id="services">Services</h1>
 
-<p>The event stream is the heart of the microservice ecosystem.</p>
+<h2 id="structure">Structure</h2>
 
-<p>Built on <a href="https://kafka.apache.org/">Apache Kafka</a>, the event stream allows each microservice to function independently of the next, simply waiting for an appropriate event in the event stream to trigger an action. Once it has completed its action, if appropriate, it may put an event back into the event stream to trigger a downstream or dependent microservice.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Type</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>char(36)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>varchar(255)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>desc</td>
+      <td>varchar(255)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>provider_id</td>
+      <td>char(36)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>event_id</td>
+      <td>char(36) NULL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>elegibility_id</td>
+      <td>char(36) NULL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>costoption_id</td>
+      <td>char(36) NULL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>created</td>
+      <td>datetime</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>updated</td>
+      <td>datetime</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>flagged</td>
+      <td>tinyint(1)</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-<p>This sequence allows microservices to function without causing dependency failures. I.e. a failure in one microservice should not be allowed cause the whole system to fail or to cause cascading errors.</p>
 
-<p>Each microservice will need to include an event sourcing sub-system to respond to relevant events in the event stream for the microservice.</p>
-
-<p class="alert alert-primary">There are many code libraries available for interacting with Apache Kafka. Read the documentation on <a href="./eventsourcing">event sourcing</a> for more.</p>
-
-<h2 id="microservices-and-event-streaming">Microservices and Event Streaming</h2>
-
-<h3 id="further-reading">Further reading</h3>
-
-<h4 id="videos">Videos</h4>
-
-<ul>
-  <li>Guido Schmutz, Oracle Code 2018 — <a href="https://www.youtube.com/watch?v=llgU1UqL2JQ">Building Event Driven MicroServices with Apache Kafka</a></li>
-  <li>Chris Richardson, DockerCon 2016 — <a href="https://www.youtube.com/watch?v=sSm2dRarhPo">Microservices + Events + Docker = A Perfect Trio</a></li>
-</ul>
-
-<h4 id="blogs">Blogs</h4>
-
-<ul>
-  <li>ThoughtWorks — <a href="https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream">Scaling Microservices with an Event Stream</a></li>
-  <li>Capital One Tech — <a href="https://medium.com/capital-one-tech/event-streaming-an-additional-architectural-style-to-supplement-api-design-703c4f801722">Event-Streaming: An Additional Architectural Style to Supplement API Design</a></li>
-</ul>
-
-
-
-          
-          
-          
-          
-          
-          <hr>
-          <h2 class="text-delta">Table of contents</h2>
-          <ul>
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-              <li>
-                <a href="/microservices/eventstream/eventsourcing">Event Sourcing</a>
-              </li>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          </ul>
           
         </div>
       </div>
