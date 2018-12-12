@@ -11,19 +11,15 @@ Stores and retrieves the data of the directory of service.
 
 Contains data for:
 
-- **Providers**
-- **Services**
-- **Eligibility**
-- **Cost options**
-- **Events**, including attending info
-- **Contacts**
-- **Venues**
-- **Taxonomy**, including
-  - category
-  - function
-  - type
-  - deliverable type
-  - tag
+- **[Providers](/microservices/datastore/providers)**
+- **[Services](/microservices/datastore/services)**
+- **[Eligibility](/microservices/datastore/eligibilities)**
+- **[Cost options](/microservices/datastore/costoptions)**
+- **[Events](/microservices/datastore/events)**
+- **[Contacts](/microservices/datastore/contacts)**
+- **[Venues](/microservices/datastore/venues)**
+- **[Taxonomy](/microservices/datastore/taxonomy)**
+- **[Taxonomy Reference](/microservices/datastore/taxonomy_ref)**
 
 ## Repository
 
