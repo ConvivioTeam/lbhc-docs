@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Web page scraper
+title: Web Page Scraper
 parent: Scraper
 grand_parent: Microservices
 category: scraper
@@ -9,7 +9,7 @@ nav_order: 3
 permalink: microservices/scraper/webpage
 ---
 
-# Web page scraper
+# Web Page Scraper
 
 The web page scraper is a plugin with a set of abstract classes. It is designed as a base scraper with tools that are useful to every scraper that needs to use a website (as opposed to an API) as is data source.
 
@@ -49,6 +49,6 @@ class ICareWebPageScraperPlugin extends WebPageScraper
 ```
 
 
-## Web page scrapers
+## Web Page Scrapers
 
 {% include scrapers_list.html %}

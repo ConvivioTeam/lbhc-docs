@@ -29,6 +29,8 @@ Specific documentation about each scraper tool in the Scraper microservice:
 
 {% include scrapers_list.html %}
 
+{% include_relative include-scraping-source.md %}
+
 {% include_relative include-event-sourcing.md %}
 
 ## Repository
