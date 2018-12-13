@@ -8,4 +8,8 @@ nav_order: 1
 ---
 # {{ site.title }}
 
-Documentation for the system infrastructure.
+This is the documentation site for the Hackney & City Directory of Services system.
+
+The system is designed with a [microservices architecture](https://microservices.io/) of loosely coupled services for performance, resilience and effective future-proofing.
+
+{% include homepage_links.html %}
