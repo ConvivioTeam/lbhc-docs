@@ -10,7 +10,7 @@
         {% unless node.nav_exclude %}
             {% if node.parent == nil and node.layout != nil %}
             <li class="navigation-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title or page.ggrand_parent == node.title %} active{% endif %}">
-                {% if page.parent == node.title or page.grand_parent == node.title %}
+                {% if page.parent == node.title or page.grand_parent == node.title or page.ggrand_parent == node.title %}
                 {% assign first_level_url = node.url | relative_url %}
                 {% endif %}
                 <a href="{{ node.url | relative_url }}" class="navigation-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
@@ -29,6 +29,7 @@
                             <ul class="navigation-list-child-list">
                             {% for grand_child in grand_children_list %}
                                 {% if grand_child.parent == child.title %}
+                                {% if page.title == grand_child.parent or page.parent == grand_child.parent or page.grand_parent == grand_child.parent %}
                                 <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
                                     <a href="{{ grand_child.url | relative_url }}" class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
                                     {% if grand_child.has_children %}
@@ -37,14 +38,17 @@
                                         {% for ggrand_child in ggrand_children_list %}
                                         <!-- {{ ggrand_child.title }} -->
                                             {% if ggrand_child.parent == grand_child.title %}
+                                            {% if page.title == ggrand_child.parent or page.parent == ggrand_child.parent or page.grand_parent == ggrand_child.grand_parent %}
                                             <li class="navigation-list-item {% if page.url == ggrand_child.url %} active{% endif %}">
                                                 <a href="{{ ggrand_child.url | relative_url }}" class="navigation-list-link{% if page.url == ggrand_child.url %} active{% endif %}">{{ ggrand_child.title }}</a>
                                             </li>
+                                            {% endif %}
                                             {% endif %}
                                         {% endfor %}
                                         </ul>
                                     {% endif %}
                                 </li>
+                                {% endif %}
                                 {% endif %}
                             {% endfor %}
                             </ul>
