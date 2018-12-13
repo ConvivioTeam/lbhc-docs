@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Home - Hackney & City Directory of Services Documentation</title>
+    <title>API scraper - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -76,9 +76,9 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
-                <a href="/" class="navigation-list-link active">Home</a>
+                <a href="/" class="navigation-list-link">Home</a>
                 
             </li>
             
@@ -140,7 +140,7 @@
         
         
             
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -400,7 +400,7 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
                         <a href="/microservices/scraper" class="navigation-list-link">Scraper</a>
                         
@@ -466,8 +466,8 @@
                                 
                             
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/scraper/api" class="navigation-list-link">API scraper</a>
+                                <li class="navigation-list-item  active">
+                                    <a href="/microservices/scraper/api" class="navigation-list-link active">API scraper</a>
                                     
                                         
                                         <ul class="navigation-list-child-list">
@@ -806,13 +806,177 @@
       </div>
       <div class="main-content">
         
+          
+          
+          
+          
+          
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices/scraper">Scraper</a></li>
+                <li class="breadcrumb-nav-list-item"><span>API scraper</span></li>
+              </ol>
+            </nav>
+          
+        
         <div class="page-content">
-          <h1 id="hackney--city-directory-of-services-documentation">Hackney &amp; City Directory of Services Documentation</h1>
+          <h1 id="api-scraper">API scraper</h1>
 
-<p>Documentation for the system infrastructure.</p>
+<p>The API page scraper is a plugin with a set of abstract classes. It is designed as a base scraper with tools that are useful to every scraper that needs to use an API (as opposed to a website) as is data source.</p>
+
+<h2 id="base-abstract-class-apiscraper">Base abstract class, ApiScraper</h2>
+
+<p>The ApiScraper defines a base scraper class for web pages.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">ApiScraper</span> <span class="k">extends</span> <span class="nx">ScraperPlugin</span> <span class="k">implements</span> <span class="nx">ApiScraperInterface</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Each individual source scraper should then <code class="highlighter-rouge">extends ApiScraper</code> to be identifiable and able to function as an API scraper.</p>
+
+<h3 id="example">Example</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Scraper\ICareOpenObjectsScraper</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Plugins\ApiScraper\Scraper\ApiScraper</span><span class="p">;</span>
+
+<span class="sd">/**
+ * A scraper for iCare Open Objects.
+ *
+ * @package App\Scraper\iCareOpenObjectsScraper
+ */</span>
+<span class="k">class</span> <span class="nc">iCareOpenObjectsScraperPlugin</span> <span class="k">extends</span> <span class="nx">ApiScraper</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="api-scrapers">API scrapers</h2>
+
+<ul>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+          
+          
+          
+          
+          
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          <ul>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </ul>
           
         </div>
       </div>

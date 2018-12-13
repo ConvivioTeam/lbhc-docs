@@ -99,55 +99,97 @@
   },
   "14": {
     "id": "14",
-    "title": "Scraper",
-    "content": " MicroserviceThe scraper microservice pulls in data from external data sources. It is built with a plugin architecture, so that scapers or crawlers for a variety of external sources can be created.Once data has been scraped, it should be put into the system event stream to create or update entries in the data store.PluginsThe scraper microservice is built for adding plugins. plugins are built with an Object Oriented architecture, so that a scraper plugin is registered if it extends Plugin base class.There are thus two basic plugin sets. Each is an abstract base class, so that it can be extended for a particular source, for example, where a different authentication key or method is required for access.These base plugins are found in namespace App Plugins in ./source/app/Plugins. These plugins search for implementations in namespace App  in ./source/app/.1. Web Page scrapersThese are scrapers that make an HTTP GET request for a web page and then parse the page content to find the specific element on the page, e.g. using a CSS selector.&amp;lt;?phpabstract class WebPage extends Plugin implements WebPageInterface{    ...}Each individual source scraper should then extends WebPage to be identifiable and able to function as a web page scraper.Example&amp;lt;?phpnamespace App  ICareWebPage;use App Plugins WebPage  WebPage;/** * A scraper for the Hackney iCare website. * * @package App  ICareWebPage */class ICareWebPagePlugin extends WebPage{    ...}2. API scrapersThese are scrapers that make HTTP GET (and possibly POST requests) for API resource endpoints and retrieve JSON (or XML) data in response.abstract class ApiPlugin extends Plugin implements ApiInterface{    ...}Each individual source scraper should then extends Api to be identifiable and able to function as an API scraper.Example&amp;lt;?phpnamespace App  iCareOpenObjects;use App Plugins Api  ApiInterface;/** * A scraper for iCare Open Objects. * * @package App  iCareOpenObjects */class iCareOpenObjectsPlugin implements ApiInterface{    ...}Event Sourcing@todoRepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-scraper-service repository.",
-    "url": "/microservices/scraper",
-    "relUrl": "/microservices/scraper"
+    "title": "API scraper",
+    "content": "The API page scraper is a plugin with a set of abstract classes. It is designed as a base scraper with tools that are useful to every scraper that needs to use an API (as opposed to a website) as is data source.Base abstract class, ApiScraperThe ApiScraper defines a base scraper class for web pages.abstract class ApiScraper extends ScraperPlugin implements ApiScraperInterface{    ...}Each individual source scraper should then extends ApiScraper to be identifiable and able to function as an .Example&amp;lt;?phpnamespace App Scraper ICareOpenObjectsScraper;use App Plugins ApiScraper Scraper ApiScraper;/** * A scraper for iCare Open Objects. * * @package App Scraper iCareOpenObjectsScraper */class iCareOpenObjectsScraperPlugin extends ApiScraper{    ...}s",
+    "url": "/microservices/scraper/api",
+    "relUrl": "/microservices/scraper/api"
   },
   "15": {
     "id": "15",
+    "title": "Deployment",
+    "content": "This microservice will be deployed in several scenarios, in production, testing and local development.Below is guidance on deployment in different contexts:Production deployment@todoLocal deployment and developmentSee the README in the repository root for instructions on local development.",
+    "url": "/microservices/scraper/deployment",
+    "relUrl": "/microservices/scraper/deployment"
+  },
+  "16": {
+    "id": "16",
+    "title": "Requirements",
+    "content": "The Scraper microservice is designed to run in a containerised enviroment based on Docker. Most of the requirements for this microservice are already contained in the Docker files in this repo, but below is an outline of the architecture of the containers in this microservice and the requirements in their build.The scraper tool is designed to retrieve content from third-party data sources, currently via web APIs or from web pages, and then extract data from those third-party sources. The microservices therefore has package dependencies to support that.Laravel LumenThe system is built with Lumen, a PHP microservice-oriented framework from Laravel.Current version: 5.7DependenciesBeyond the standard packages required by Lumen, the Scraper microservice depends on:  Guzzle HTTP request client » guzzlehttp/guzzle ^6.3  Symfony CSSselector component » symfony/css-selector ^4.2  Symfony DomCrawler component » symfony/dom-crawler ^4.1@todo: requires Kafka integration, also. See the event stream microservice.  Kafka Queue driver for Laravel » rapide/laravel-queue-kafka ~1.0PHPThe system is built to run on PHP 7.2.Current version in the Docker container: PHP Version 7.2.11For the dependency libraries, PHP must have the following extensions installed:  ext-dom  ext-http  ext-jsonWe have built a custom PHP Docker image with support for Kafka integration via the rdkafka PECL extension, which in turn needs librdkafka. The image also has ext-http installed.",
+    "url": "/microservices/scraper/requirements",
+    "relUrl": "/microservices/scraper/requirements"
+  },
+  "17": {
+    "id": "17",
+    "title": "iCare Web Page Scraper",
+    "content": "The iCare web page scraper implements the Web Page Scraper abstract class to create a scraper for the Hackney iCare website.",
+    "url": "/microservices/scraper/webpage/icare",
+    "relUrl": "/microservices/scraper/webpage/icare"
+  },
+  "18": {
+    "id": "18",
+    "title": "Web Page Scraper",
+    "content": "The web page scraper is a plugin with a set of abstract classes. It is designed as a base scraper with tools that are useful to every scraper that needs to use a website (as opposed to an API) as is data source.Base abstract class, WebPageScraperThe WebPageScraper defines a base scraper class for web pages.&amp;lt;?phpabstract class WebPageScraper extends ScraperPlugin implements WebPageScraperInterface{    ...}Each individual web page source scraper should extends WebPageScraper to be identifiable and able to function as a web page scraper.Example&amp;lt;?phpnamespace App Scraper ICareWebPageScraper;use App Plugins WebPageScraper Scraper WebPageScraper;/** * A scraper for the Hackney iCare website. * * @package App Scraper ICareWebPageScraper */class ICareWebPageScraperPlugin extends WebPageScraper{    ...}s    iCare ",
+    "url": "/microservices/scraper/webpage",
+    "relUrl": "/microservices/scraper/webpage"
+  },
+  "19": {
+    "id": "19",
+    "title": "Scraper",
+    "content": " MicroserviceThe scraper microservice pulls in data from external data sources. It is built with a plugin architecture, so that scapers or crawlers for a variety of external sources can be created.Once data has been scraped, it should be put into the system event stream to create or update entries in the data store.RequirementsSystem requirements for this microservice are set out separately.DeploymentDeployment processes for this microservice are set out separately.PluginsThe scraper microservice is built for adding plugins. plugins are built with an Object Oriented architecture, so that a scraper plugin is registered if it extends Plugin base class.Every scaper plugin class must extends Plugin in order to be recognised by the microsservice. Extenstions of this base class must1) have the $name property set in each plugin.2) implement a public function boot() method.For example:class MyExamplePlugin extends Plugin{    /**     * The Plugin Name.     *     * @var string     */    public $name = 'my_example_scraper';    /**     * Boot-time commands.     */    public function boot() {        // Do something.    }    …}The boot() method is called at boot time, and can be used to implement a number of tasks. For example, the Plugin abstract class includes a method to enableRoutes() that will look for a routes.php file in the root of the scraper plugin that defines any routes for the scraper.    /**     * Enable routes for this plugin.     *     * @param string $path     */    protected function enableRoutes($path = 'routes.php')    {        $this-&amp;gt;app-&amp;gt;router-&amp;gt;group(            ['namespace' =&amp;gt; $this-&amp;gt;getPluginControllerNamespace()],            function ($router) use ($path) {                require $this-&amp;gt;getPluginPath() . DIRECTORY_SEPARATOR . $path;            }        );    }Base plugin setsThere are thus two basic plugin sets. Each is an abstract base class, so that it can be extended for a particular source, for example, where a different authentication key or method is required for access.These base plugins are found in namespace App Plugins in ./source/app/Plugins. These plugins search for implementations in namespace App  in ./source/app/.1. Web Page scrapersThese are scrapers that make an HTTP GET request for a web page and then parse the page content to find the specific element on the page, e.g. using a CSS selector.2. API scrapersThese are scrapers that make HTTP GET (and possibly POST requests) for API resource endpoints and retrieve JSON (or XML) data in response.Plugin architectureEach plugin includes an abstract scraper class that itself extends Plugin. This abstract class can then be implemented by s to define the kind of scraper they are and give them access to base toolkits. For example:namespace App Plugins WebPage ;...abstract class WebPage extends Plugin { ... }Classes that extend a plugin  class are then defined as  plugins. For example:namespace App  ICareWebPage;...class ICareWebPagePlugin extends WebPage { ... }Inside each plugin’s ./Http directory are the abstract tools for HTTP request/repsonse handling for each source type, API and web page.Drivers and ServicesTo support HTTP request/response handling, a scraper needs an HttpDriver and an HttpService.HttpDriversAn HttpDriver uses Guzzle to contruct GET requests to fetch data from a remote source. (In principle a driver could make POST, PUT and DELETE, though those are not currently implemented.) HttpDrivers also use Guzzle to handle the responses and return them to the original call.HttpDrivers are created with a configuration array passed to the constructor. HttpDrivers require a base URL in the configuration array.Given that the response from an API and a web page are different (json or XML for the former, markup for the latter), the responses need to be handled differently, turning them into a usable response result class.HttpServicesAn HttpService creates the definition of how a specific scraper should connect to the remote source. It holds the necessary properties for making a connection, such us:  the HttpDriver to use  connection configurations, including the path to the remote sourceIt includes methods to:  contruct the URL for an HTTP request  get the response from the requestIt also includes methods that are shortcuts for making specific HTTP requests and handling a request-specific response. These shortcut methods require a Request object, which defines any required or optional parameters. The method should return a Respone object appropriate to the request. For example, a simple method for ‘hello’ request that checks the base URL is valid might look like:    /**     * Make a simple request for the API hello endpoint.     *     * @param  App Http Request GetHelloRequest $request     *   GetHelloRequest object.     *     * @return  App Plugins WebPage Http Response HelloWebPageResponse     *   Hello response object.     *     * @throws     */    public function hello(GetHelloRequest $request)    {        $this-&amp;gt;setUrl('/');        return new HelloWebPageResponse($this-&amp;gt;getDriver()-&amp;gt;get($this-&amp;gt;getUrl(), $request));    }To make a ‘hello’ request, to check a site is up, then, you would need to first get a HttpDriver, pass it to a HttpService, get a GetHelloRequest object and then call the shortcut method:$driver_conf = ['some', 'configuration', 'here'];$driver = new MyWebPageHttpDriver($driver_conf);$service_conf = ['some', 'other', 'configuration', 'here'];$service = new MyWebPageHttpService($driver, $service_conf);$request = new GetHelloRequest();$response = $this-&amp;gt;hello($request);sSpecific documentation about each scraper tool in the  microservice:    API scraper    Web Page Scraping a SourceEach scraper makes HTTP requests for data from a source system, whether an API or a website. To do that it needs 2 key elements to make requests and handle the responses:1) an HTTP request/response driver2) an HTTP request serviceHTTP DriversThere is a base HttpDriver class that extends an AbstractHttpDriver. This has someEvent Sourcing@todoRepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-scraper-service repository.",
+    "url": "/microservices/scraper",
+    "relUrl": "/microservices/scraper"
+  },
+  "20": {
+    "id": "20",
     "title": "System Design",
     "content": " and ArchitectureThe system is designed with a loosely-coupled event-driven microservice architecture. An event stream sits at the core of the architecture as the mode of communication between services. Each microservice includes event sourcing and event creation routines.The event stream microservice is built on Apache Kafka.Loosley-coupledBad, bad, not goodIn a close-coupled microservice system design, individual microservices can call APIs on each other, making the functioning of one microservice dependent on the functioning of one or many others. A problem with an upstream microservice can cause the current microservice to fail, allowing others downstream to fail also.BetterLoosely-coupling microservices removes that dependency.Instead, each microservice publishes events to a shared event store or event stream when it completes a task or its state changes. At the same time, the microservice subscribes to events in the event store, which may trigger it to perform actions.This means that each transaction may take the form of a saga, a sequence of local transactions. Each local transaction updates the performs an action or updates the state of an item (such as saving to a database) and publishes a message or event to trigger the next local transaction in the saga.  Failure can be handled with a series of compensating actions that undo any changes made by preceding local transactions.Command Query Responsibility Segregation (CQRS)This allows the two sets of actions to be segregated effectively into two parts: the command-side and the query-side.  Command actions: Create, update or delete (HTTP POST, PUT/PATCH, DELETE requests) actions, which emits events when data changes.  Query actions: handles queries by executing them against one or more views that are kept up to date by subscribing to the stream of events emitted when data changes.Design (v0.2)Design schematicsProcess designSystem design",
     "url": "/microservices/systemdesign",
     "relUrl": "/microservices/systemdesign"
   },
-  "16": {
-    "id": "16",
+  "21": {
+    "id": "21",
     "title": "",
     "content": "",
     "url": "",
     "relUrl": ""
   },
-  "17": {
-    "id": "17",
+  "22": {
+    "id": "22",
     "title": "",
     "content": "",
     "url": "",
     "relUrl": ""
   },
-  "18": {
-    "id": "18",
+  "23": {
+    "id": "23",
+    "title": "",
+    "content": "",
+    "url": "",
+    "relUrl": ""
+  },
+  "24": {
+    "id": "24",
     "title": "CI/CD Pipeline",
     "content": "CI and CD is provided by Jenkins.Each job is configured using Jenkins Declarative Pipelines.Pipeline files should be contained within the services repo to allow developers to modify the build process if required.",
     "url": "/infrastructure/ci-cd-pipeline.html",
     "relUrl": "/infrastructure/ci-cd-pipeline.html"
   },
-  "19": {
-    "id": "19",
+  "25": {
+    "id": "25",
     "title": "Infrastructure",
     "content": "@TODO",
     "url": "/infrastructure",
     "relUrl": "/infrastructure"
   },
-  "21": {
-    "id": "21",
+  "27": {
+    "id": "27",
     "title": "About",
     "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
-  "22": {
-    "id": "22",
+  "28": {
+    "id": "28",
     "title": "Home",
     "content": "Hackney &amp;amp; City Directory of Services DocumentationDocumentation for the system infrastructure.",
     "url": "/",

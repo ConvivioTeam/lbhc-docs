@@ -74,3 +74,9 @@
     padding-top: 6rem;
     overflow-y: auto;
     flex: 1 1 auto; } }
+
+h4 {
+  font-size: initial !important;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-weight: 500; }

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Home - Hackney & City Directory of Services Documentation</title>
+    <title>Requirements - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -76,9 +76,9 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
-                <a href="/" class="navigation-list-link active">Home</a>
+                <a href="/" class="navigation-list-link">Home</a>
                 
             </li>
             
@@ -140,7 +140,7 @@
         
         
             
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -400,7 +400,7 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
                         <a href="/microservices/scraper" class="navigation-list-link">Scraper</a>
                         
@@ -429,8 +429,8 @@
                                 
                             
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/scraper/requirements" class="navigation-list-link">Requirements</a>
+                                <li class="navigation-list-item  active">
+                                    <a href="/microservices/scraper/requirements" class="navigation-list-link active">Requirements</a>
                                     
                                 </li>
                                 
@@ -806,11 +806,68 @@
       </div>
       <div class="main-content">
         
+          
+          
+          
+          
+          
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices/scraper">Scraper</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Requirements</span></li>
+              </ol>
+            </nav>
+          
+        
         <div class="page-content">
-          <h1 id="hackney--city-directory-of-services-documentation">Hackney &amp; City Directory of Services Documentation</h1>
+          <h1 id="requirements">Requirements</h1>
 
-<p>Documentation for the system infrastructure.</p>
+<p>The Scraper microservice is designed to run in a containerised enviroment based on Docker. Most of the requirements for this microservice are already contained in the Docker files in this repo, but below is an outline of the architecture of the containers in this microservice and the requirements in their build.</p>
 
+<p>The scraper tool is designed to retrieve content from third-party data sources, currently via web APIs or from web pages, and then extract data from those third-party sources. The microservices therefore has package dependencies to support that.</p>
+
+<h2 id="laravel-lumen">Laravel Lumen</h2>
+
+<p>The system is built with <a href="https://lumen.laravel.com/">Lumen</a>, a PHP microservice-oriented framework from <a href="https://laravel.com/">Laravel</a>.</p>
+
+<p><strong>Current version:</strong> 5.7</p>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p>Beyond the standard packages required by Lumen, the Scraper microservice depends on:</p>
+
+<ul>
+  <li><a href="http://docs.guzzlephp.org/en/stable/">Guzzle HTTP request client</a> » guzzlehttp/guzzle ^6.3</li>
+  <li><a href="https://symfony.com/doc/current/components/css_selector.html">Symfony CSSselector component</a> » symfony/css-selector ^4.2</li>
+  <li><a href="https://symfony.com/doc/current/components/dom_crawler.html">Symfony DomCrawler component</a> » symfony/dom-crawler ^4.1</li>
+</ul>
+
+<p class="alert alert-primary"><strong>@todo:</strong> requires Kafka integration, also. See the <a href="../../eventstream">event stream</a> microservice.</p>
+
+<ul>
+  <li><a href="https://github.com/rapideinternet/laravel-queue-kafka">Kafka Queue driver for Laravel</a> » rapide/laravel-queue-kafka ~1.0</li>
+</ul>
+
+<h2 id="php">PHP</h2>
+
+<p>The system is built to run on PHP 7.2.</p>
+
+<p>Current version in the Docker container: PHP Version 7.2.11</p>
+
+<p>For the dependency libraries, PHP must have the following extensions installed:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">ext-dom</code></li>
+  <li><code class="highlighter-rouge">ext-http</code></li>
+  <li><code class="highlighter-rouge">ext-json</code></li>
+</ul>
+
+<p>We have built a custom <a href="https://hub.docker.com/r/convivio/php-kafka/">PHP Docker image with support for Kafka</a> integration via the <a href="https://pecl.php.net/package/rdkafka">rdkafka PECL extension</a>, which in turn needs <a href="https://github.com/edenhill/librdkafka">librdkafka</a>. The image also has <code class="highlighter-rouge">ext-http</code> installed.</p>
 
 
           
