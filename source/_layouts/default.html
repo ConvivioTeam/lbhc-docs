@@ -43,6 +43,7 @@
           {% if page.parent != nil and page.parent != page.title %}
           {% assign parent = nil %}
           {% assign grand_parent = nil %}
+          {% assign ggrand_parent = nil %}
           {% for node in pages_list %}
             {% if node.title == page.parent %}
             {% assign parent = node %}
@@ -50,10 +51,16 @@
             {% if page.grand_parent != nil and node.title == page.grand_parent %}
             {% assign grand_parent = node %}
             {% endif %}
+            {% if page.ggrand_parent != nil and node.title == page.ggrand_parent %}
+            {% assign ggrand_parent = node %}
+            {% endif %}
           {% endfor %}
           
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
+                {% if page.ggrand_parent != nil %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ ggrand_parent.url | relative_url }}">{{ ggrand_parent.title }}</a></li>
+                {% endif %}
                 {% if page.grand_parent != nil %}
                 <li class="breadcrumb-nav-list-item"><a href="{{ grand_parent.url | relative_url }}">{{ grand_parent.title }}</a></li>
                 {% endif %}
