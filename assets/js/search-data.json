@@ -191,7 +191,7 @@
   "28": {
     "id": "28",
     "title": "Home",
-    "content": "Hackney &amp;amp; City Directory of Services DocumentationDocumentation for the system infrastructure.",
+    "content": "Hackney &amp;amp; City Directory of Services DocumentationThis is the documentation site for the Hackney &amp;amp; City Directory of Services system.The system is designed with a microservices architecture of loosely coupled services for performance, resilience and effective future-proofing.            Microservices        Documentation on the microservices in the DoS architecture.                Infrastructure        Documentation on deploying the system to a production environment.    ",
     "url": "/",
     "relUrl": "/"
   }
