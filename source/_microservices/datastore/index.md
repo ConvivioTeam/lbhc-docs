@@ -33,3 +33,19 @@ This service provide the following functionality:
 * Creation of production and development databases
 * Migration handler for database updates
 * Model and Object definitions
+
+## Build and Deployment
+
+[Drone CI](https://drone.io/) is used to build and push the Docker image to Amazon ECR. It can be access [here](https://drone.hc-dos.co.uk).
+
+The database build and migration service has the following workflow:
+
+1. Database changes are made to the app and pushed to ```master```
+2. Drone CI builds the docker image
+3. Drone CI pushes the docker image to AWS ECR
+
+Future work:
+
+* Expand CI pipeline to deploy to ECS and run database migrations
+* Validation of any changes to the database
+* Reporting of any changes to the database
