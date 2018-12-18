@@ -6,8 +6,8 @@ nav_order: 2
 ---
 # CI/CD Pipeline
 
-CI and CD is provided by [Jenkins](https://jenkins.io/).
+CI/CD is provided by [Drone CI](https://drone.io). It's yaml syntax and native support for Docker makes for easy development and running of pipelines.
 
-Each job is configured using [Jenkins Declarative Pipelines](https://jenkins.io/doc/book/pipeline/syntax/).
+It can be found [here](https://drone.hc-dos.co.uk).
 
-Pipeline files should be contained within the services repo to allow developers to modify the build process if required.
+[Here](https://github.com/LBHackney-IT/DoS-data-store-service/blob/master/.drone.yml) is an example of a pipeline used in the Data Store Service.
