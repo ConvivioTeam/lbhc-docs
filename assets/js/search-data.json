@@ -37,7 +37,7 @@
   "5": {
     "id": "5",
     "title": "Data Store",
-    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events  Contacts  Venues  Taxonomy  Taxonomy ReferenceRepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.FunctionalityThis service provide the following functionality:  Creation of production and development databases  Migration handler for database updates  Model and Object definitions",
+    "content": "Data store microserviceStores and retrieves the data of the directory of service.Contains data for:  Providers  Services  Eligibility  Cost options  Events  Contacts  Venues  Taxonomy  Taxonomy ReferenceRepositoryCode for the DoS  microservice is in the https://github.com/LBHackney-IT/DoS-data-store-service repository.FunctionalityThis service provide the following functionality:  Creation of production and development databases  Migration handler for database updates  Model and Object definitionsBuild and DeploymentDrone CI is used to build and push the Docker image to Amazon ECR. It can be access here.The database build and migration service has the following workflow:  Database changes are made to the app and pushed to master  Drone CI builds the docker image  Drone CI pushes the docker image to AWS ECRFuture work:  Expand CI pipeline to deploy to ECS and run database migrations  Validation of any changes to the database  Reporting of any changes to the database",
     "url": "/microservices/datastore",
     "relUrl": "/microservices/datastore"
   },

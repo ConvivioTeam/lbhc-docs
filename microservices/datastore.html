@@ -662,6 +662,26 @@
   <li>Model and Object definitions</li>
 </ul>
 
+<h2 id="build-and-deployment">Build and Deployment</h2>
+
+<p><a href="https://drone.io/">Drone CI</a> is used to build and push the Docker image to Amazon ECR. It can be access <a href="https://drone.hc-dos.co.uk">here</a>.</p>
+
+<p>The database build and migration service has the following workflow:</p>
+
+<ol>
+  <li>Database changes are made to the app and pushed to <code class="highlighter-rouge">master</code></li>
+  <li>Drone CI builds the docker image</li>
+  <li>Drone CI pushes the docker image to AWS ECR</li>
+</ol>
+
+<p>Future work:</p>
+
+<ul>
+  <li>Expand CI pipeline to deploy to ECS and run database migrations</li>
+  <li>Validation of any changes to the database</li>
+  <li>Reporting of any changes to the database</li>
+</ul>
+
 
           
           
