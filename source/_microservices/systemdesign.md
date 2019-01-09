@@ -43,4 +43,4 @@ This allows the two sets of actions to be segregated effectively into two parts:
   
 #### System design
 
-  ![Directory of services system model design]({{ 'assets/images/microservices/dos-system-model-v0.1.png' | relative_url }})
+  ![Directory of services system model design]({{ 'assets/images/microservices/dos-system-model-v0.2.png' | relative_url }})
