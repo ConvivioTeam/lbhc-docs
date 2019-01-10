@@ -3,7 +3,7 @@ layout: default
 title: Event Sourcing
 parent: Event Stream
 grand_parent: Microservices
-nav_order: 1
+nav_order: 2
 permalink: microservices/eventstream/eventsourcing
 ---
 
