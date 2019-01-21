@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Services - Hackney & City Directory of Services Documentation</title>
+    <title>Future Considerations - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -148,7 +148,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -299,7 +299,7 @@
                     
                     
                     
-                        <li class="navigation-list-item  active">
+                        <li class="navigation-list-item ">
                         
                         <a href="/microservices/datastore" class="navigation-list-link">Data Store</a>
                         
@@ -316,19 +316,9 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/providers" class="navigation-list-link">Providers</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item  active">
-                                    <a href="/microservices/datastore/services" class="navigation-list-link active">Services</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -345,11 +335,6 @@
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/eligibilities" class="navigation-list-link">Eligitbilities</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -369,28 +354,13 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/contacts" class="navigation-list-link">Contacts</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/costoptions" class="navigation-list-link">Cost Options</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/events" class="navigation-list-link">Events</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -398,28 +368,13 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/taxonomy" class="navigation-list-link">Taxonomy</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/taxonomy_ref" class="navigation-list-link">Taxonomy Reference</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/venues" class="navigation-list-link">Venues</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -573,7 +528,7 @@
         
         
             
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/infrastructure" class="navigation-list-link">Infrastructure</a>
                 
@@ -627,9 +582,9 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
-                        <a href="/infrastructure/future-considerations.html" class="navigation-list-link">Future Considerations</a>
+                        <a href="/infrastructure/future-considerations.html" class="navigation-list-link active">Future Considerations</a>
                         
                         </li>
                     
@@ -721,80 +676,35 @@
               <ol class="breadcrumb-nav-list">
                 
                 
-                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
-                
-                <li class="breadcrumb-nav-list-item"><a href="/microservices/datastore">Data Store</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Services</span></li>
+                <li class="breadcrumb-nav-list-item"><a href="/infrastructure">Infrastructure</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Future Considerations</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="services">Services</h1>
+          <h1 id="future-considerations">Future Considerations</h1>
 
-<h2 id="structure">Structure</h2>
+<h2 id="kubernetes">Kubernetes</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Column</th>
-      <th>Type</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>desc</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>provider_id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>event_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>elegibility_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>costoption_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>created</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>updated</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>flagged</td>
-      <td>tinyint(1)</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>With the microservice architecture inherently built into the project it makes sense to use a container orchestration system like <a href="https://kubernetes.io/">Kubernetes</a>.</p>
+
+<p>Each component of the application has been built with the idea of scaling in mind so K8s is a perfect tool for deploying the containerised parts of the application. Special consideration should be given to persistent data such as the Data Store. Currently the Data Store storage (AWS RDS) but this could be brought into K8s if needed.</p>
+
+<h2 id="helm">Helm</h2>
+
+<p>Because K8s is quite complex to get an application up and running Helm was created to provide an abstraction layer. Building a Helm chart would be a great way of documenting and deploying K8s in production.</p>
+
+<h2 id="kubernetes-on-eks">Kubernetes on EKS</h2>
+
+<p>AWS now supports Kubernetes on their cloud platform however it isn’t available in London yet so while it would be good to keep all components with the same provider it’s out of scope until it support the UK.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<p><a href="https://medium.com/devopslinks/deploy-your-first-scaleable-php-mysql-web-application-in-kubernetes-33ed7ab66595">Deploy your first scaleable PHP/MySQL Web application in Kubernetes
+</a></p>
+
+<p><a href="https://medium.com/devopslinks/learning-kubernetes-by-doing-part-1-setting-up-eks-in-aws-50dcf7a76247">Learning Kubernetes on EKS by Doing Part 1— Setting Up EKS</a></p>
 
 
           

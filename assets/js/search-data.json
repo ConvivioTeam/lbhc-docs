@@ -190,20 +190,41 @@
   },
   "27": {
     "id": "27",
+    "title": "Docker Workflow",
+    "content": "Production Docker ImagesThere is a key difference between development use and production use.Production images should be packaged with the source code and everything required to run on it’s own.StorageDocker images can be stored on either Docker Hub or Amazon ECS.",
+    "url": "/infrastructure/docker-workflow.html",
+    "relUrl": "/infrastructure/docker-workflow.html"
+  },
+  "28": {
+    "id": "28",
+    "title": "Future Considerations",
+    "content": "KubernetesWith the microservice architecture inherently built into the project it makes sense to use a container orchestration system like Kubernetes.Each component of the application has been built with the idea of scaling in mind so K8s is a perfect tool for deploying the containerised parts of the application. Special consideration should be given to persistent data such as the Data Store. Currently the Data Store storage (AWS RDS) but this could be brought into K8s if needed.HelmBecause K8s is quite complex to get an application up and running Helm was created to provide an abstraction layer. Building a Helm chart would be a great way of documenting and deploying K8s in production.Kubernetes on EKSAWS now supports Kubernetes on their cloud platform however it isn’t available in London yet so while it would be good to keep all components with the same provider it’s out of scope until it support the UK.Further ReadingDeploy your first scaleable PHP/MySQL Web application in KubernetesLearning Kubernetes on EKS by Doing Part 1— Setting Up EKS",
+    "url": "/infrastructure/future-considerations.html",
+    "relUrl": "/infrastructure/future-considerations.html"
+  },
+  "29": {
+    "id": "29",
     "title": "Infrastructure",
     "content": "All services are hosted on Amazon Web Services (AWS).Containers are stored in ECR. New ECRs can be requested.The Data Store is held in RDS and is accessible through a jump host.Any new services can be provisioned in the VPC on a private subnet accessible through the jump host.",
     "url": "/infrastructure",
     "relUrl": "/infrastructure"
   },
-  "29": {
-    "id": "29",
+  "30": {
+    "id": "30",
+    "title": "Secrets Management",
+    "content": "Vault should be used to manage secrets it has a REST api which can be used to query secrets.Many CI tools have built in support for Vault, this makes retrieving secrets in a build pipeline easy. The resulting images can then be securely stored on ECS.",
+    "url": "/infrastructure/secrets-management.html",
+    "relUrl": "/infrastructure/secrets-management.html"
+  },
+  "32": {
+    "id": "32",
     "title": "About",
     "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
-  "30": {
-    "id": "30",
+  "33": {
+    "id": "33",
     "title": "Home",
     "content": "Hackney &amp;amp; City Directory of Services DocumentationThis is the documentation site for the Hackney &amp;amp; City Directory of Services system.The system is designed with a microservices architecture of loosely coupled services for performance, resilience and effective future-proofing.            Microservices        Documentation on the microservices in the DoS architecture.                Infrastructure        Documentation on deploying the system to a production environment.    ",
     "url": "/",

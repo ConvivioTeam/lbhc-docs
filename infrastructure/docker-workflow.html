@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Services - Hackney & City Directory of Services Documentation</title>
+    <title>Docker Workflow - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -148,7 +148,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -299,7 +299,7 @@
                     
                     
                     
-                        <li class="navigation-list-item  active">
+                        <li class="navigation-list-item ">
                         
                         <a href="/microservices/datastore" class="navigation-list-link">Data Store</a>
                         
@@ -316,19 +316,9 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/providers" class="navigation-list-link">Providers</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item  active">
-                                    <a href="/microservices/datastore/services" class="navigation-list-link active">Services</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -345,11 +335,6 @@
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/eligibilities" class="navigation-list-link">Eligitbilities</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -369,28 +354,13 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/contacts" class="navigation-list-link">Contacts</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/costoptions" class="navigation-list-link">Cost Options</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/events" class="navigation-list-link">Events</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -398,28 +368,13 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/taxonomy" class="navigation-list-link">Taxonomy</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/taxonomy_ref" class="navigation-list-link">Taxonomy Reference</a>
-                                    
-                                </li>
-                                
                                 
                             
                                 
-                                
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/venues" class="navigation-list-link">Venues</a>
-                                    
-                                </li>
                                 
                                 
                             
@@ -573,7 +528,7 @@
         
         
             
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/infrastructure" class="navigation-list-link">Infrastructure</a>
                 
@@ -619,9 +574,9 @@
                     
                     
                     
-                        <li class="navigation-list-item ">
+                        <li class="navigation-list-item  active">
                         
-                        <a href="/infrastructure/docker-workflow.html" class="navigation-list-link">Docker Workflow</a>
+                        <a href="/infrastructure/docker-workflow.html" class="navigation-list-link active">Docker Workflow</a>
                         
                         </li>
                     
@@ -721,80 +676,24 @@
               <ol class="breadcrumb-nav-list">
                 
                 
-                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
-                
-                <li class="breadcrumb-nav-list-item"><a href="/microservices/datastore">Data Store</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Services</span></li>
+                <li class="breadcrumb-nav-list-item"><a href="/infrastructure">Infrastructure</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Docker Workflow</span></li>
               </ol>
             </nav>
           
         
         <div class="page-content">
-          <h1 id="services">Services</h1>
+          <h1 id="docker-workflow">Docker Workflow</h1>
 
-<h2 id="structure">Structure</h2>
+<h2 id="production-docker-images">Production Docker Images</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Column</th>
-      <th>Type</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>desc</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>provider_id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>event_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>elegibility_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>costoption_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>created</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>updated</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>flagged</td>
-      <td>tinyint(1)</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>There is a key difference between development use and production use.</p>
+
+<p>Production images should be packaged with the source code and everything required to run on it’s own.</p>
+
+<h2 id="storage">Storage</h2>
+
+<p>Docker images can be stored on either <a href="https://hub.docker.com/">Docker Hub</a> or <a href="https://aws.amazon.com/ecs/">Amazon ECS</a>.</p>
 
 
           
