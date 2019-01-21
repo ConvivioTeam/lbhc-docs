@@ -43,6 +43,10 @@ keep_files:
   - js
   - images
 
+aux_links:
+  "DoS Docs on Github":
+    - "//github.com/LBHackney-IT/DoS-docs"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
