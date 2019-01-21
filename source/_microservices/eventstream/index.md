@@ -18,7 +18,7 @@ Once it has completed its action it should put an event back into the event stre
 
 This sequence gives three tangible benefits:
 
-### 1. It explicitly supports [Command Query Responsibility Segregation (CQRS)](/microservices/systemdesign#command-query-responsibility-segregation-cqrs)
+### 1. It explicitly supports [Command Query Responsibility Segregation (CQRS)]({% link _microservices/systemdesign.md %}#command-query-responsibility-segregation-cqrs)
 
 Command actions and query actions can and should function independently of each other.
 
@@ -50,12 +50,12 @@ The Event Stream microservice is a fairly simple system, consisting of two tools
 - **Apache Kafka**, the event stream itself;
 - **Apache Zookeeper**, which maintains all the metadata about the Kafka cluster.
 
-Read the documentation about the [event stream microservice architecture](./architecture) for more.
+Read the documentation about the [event stream microservice architecture]({% link _microservices/eventstream/architecture.md %}) for more.
 
 ## Event sourcing
 
-There are many code libraries available for interacting with Apache Kafka. Read the documentation on [event sourcing](./eventsourcing) for more.
+There are many code libraries available for interacting with Apache Kafka. Read the documentation on [event sourcing]({% link _microservices/eventstream/eventsourcing/index.md %}) for more.
 
 ## Further reading
 
-We've gathered a list of materials for [further reading](./notes).
+We've gathered a list of materials for [further reading]({% link _microservices/eventstream/notes.md %}).

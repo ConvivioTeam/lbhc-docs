@@ -11,8 +11,8 @@ permalink: microservices/eventstream/notes
 
 ## Software websites
 
-- [Apache Kafka](https://kafka.apache.org/) | [docs](https://kafka.apache.org/documentation/)
-- [Apache Zookeeper](https://zookeeper.apache.org/) | [docs](https://zookeeper.apache.org/doc/current/)
+- [Apache Kafka](https://kafka.apache.org/) ([docs](https://kafka.apache.org/documentation/))
+- [Apache Zookeeper](https://zookeeper.apache.org/) ([docs](https://zookeeper.apache.org/doc/current/))
 
 ## Videos
 
