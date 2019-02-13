@@ -19,6 +19,10 @@ Endpoints are designed to be simple and easy to understand following a standard 
 
 Code for the DoS API Gateway microservice is in the [https://github.com/LBHackney-IT/DoS-api-gateway](https://github.com/LBHackney-IT/DoS-api-gateway) repository.
 
+## Technology Platform
+
+The Scraper microservice is built with [Laravel Lumen](https://lumen.laravel.com). It is a small PHP application.
+
 ## API Spec doc
 
 View the spec at [SwaggerHub](https://app.swaggerhub.com/apis-docs/LBHC/lbh-co_l_directory_of_services_gateway_api/1.0.0)

@@ -36,3 +36,7 @@ Specific documentation about each scraper tool in the Scraper microservice:
 ## Repository
 
 Code for the DoS Scraper microservice is in the [https://github.com/LBHackney-IT/DoS-scraper-service](https://github.com/LBHackney-IT/DoS-scraper-service) repository.
+
+## Technology Platform
+
+The API Gateway microservice is built with [Laravel Lumen](https://lumen.laravel.com). It is a small PHP application.

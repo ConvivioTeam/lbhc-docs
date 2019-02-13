@@ -6,7 +6,7 @@ has_children: true
 nav_order: 3
 permalink: microservices/datastore
 ---
-# Data store microservice
+# Data Store Microservice
 
 Stores and retrieves the data of the directory of service.
 
@@ -25,6 +25,10 @@ Contains data for:
 ## Repository
 
 Code for the DoS Data Store microservice is in the [https://github.com/LBHackney-IT/DoS-data-store-service](https://github.com/LBHackney-IT/DoS-data-store-service) repository.
+
+## Technology Platform
+
+The Data Store microservice is built with [Laravel Lumen](https://lumen.laravel.com). It is a small PHP application.
 
 ## Functionality
 

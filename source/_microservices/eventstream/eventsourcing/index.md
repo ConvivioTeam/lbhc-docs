@@ -11,7 +11,7 @@ permalink: microservices/eventstream/eventsourcing
 
 Each microservice will need to source events from the event stream.
 
-If an app is built with Laravel, as most of the microservices will be, then it will need to use a library to work with the Kafka-powered event stream.
+If an app is built with Laravel (most of the microservices are built with [Lumen](https://lumen.laravel.com/), a Laravel microservices framework), then it will need to use a library to work with the Kafka-powered event stream.
 
 ## Event Sourcing and Laravel Queues
 
