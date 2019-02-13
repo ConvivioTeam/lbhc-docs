@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Venues - Hackney & City Directory of Services Documentation</title>
+    <title>Data Store - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -152,7 +152,7 @@
         
         
             
-            <li class="navigation-list-item active">
+            <li class="navigation-list-item">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
@@ -404,8 +404,8 @@
                             
                                 
                                 
-                                <li class="navigation-list-item ">
-                                    <a href="/microservices/datastore/eventsourcing" class="navigation-list-link">Data Store</a>
+                                <li class="navigation-list-item  active">
+                                    <a href="/microservices/datastore/eventsourcing" class="navigation-list-link active">Data Store</a>
                                     
                                 </li>
                                 
@@ -433,8 +433,8 @@
                             
                                 
                                 
-                                <li class="navigation-list-item  active">
-                                    <a href="/microservices/datastore/venues" class="navigation-list-link active">Venues</a>
+                                <li class="navigation-list-item ">
+                                    <a href="/microservices/datastore/venues" class="navigation-list-link">Venues</a>
                                     
                                 </li>
                                 
@@ -733,84 +733,14 @@
       <div class="main-content">
         
           
-          
-          
-          
-          
-          
-            <nav class="breadcrumb-nav">
-              <ol class="breadcrumb-nav-list">
-                
-                
-                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
-                
-                <li class="breadcrumb-nav-list-item"><a href="/microservices/datastore">Data Store</a></li>
-                <li class="breadcrumb-nav-list-item"><span>Venues</span></li>
-              </ol>
-            </nav>
-          
         
         <div class="page-content">
-          <h1 id="venues">Venues</h1>
+          <h1 id="data-store-event-sourcing">Data store: event sourcing</h1>
 
-<h2 id="structure">Structure</h2>
+<p>The Data Store microservice is built with <a href="https://lumen.laravel.com">Laravel Lumen</a>. It is a small PHP application.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Column</th>
-      <th>Type</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>service_id</td>
-      <td>char(36)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>provider_id</td>
-      <td>char(36) NULL</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>address</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>details</td>
-      <td>varchar(255)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>created</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>updated</td>
-      <td>datetime</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>flagged</td>
-      <td>tinyint(1)</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>The data store microservice uses <a href="https://lumen.laravel.com/docs/5.7/queues">Laravel queues in Lumen</a> to source jobs from the <a href="/microservices/eventstream">event store microservice</a>.</p>
+
 
 
           
