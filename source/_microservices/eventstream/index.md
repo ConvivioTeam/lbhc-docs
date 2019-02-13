@@ -52,6 +52,12 @@ The Event Stream microservice is a fairly simple system, consisting of two tools
 
 Read the documentation about the [event stream microservice architecture]({% link _microservices/eventstream/architecture.md %}) for more.
 
+## Repository
+
+Code for the DoS Event Stream microservice is in the https://github.com/LBHackney-IT/DoS-event-stream-service repository.
+
+
+
 ## Event sourcing
 
 There are many code libraries available for interacting with Apache Kafka. Read the documentation on [event sourcing]({% link _microservices/eventstream/eventsourcing/index.md %}) for more.
