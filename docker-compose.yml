@@ -11,24 +11,31 @@ services:
       - 'traefik.backend=site'
       - 'traefik.port=4000'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+      - 'traefik.docker.network=traefik'
+    networks:
+      - traefik
 
-  portainer:
-    image: portainer/portainer
-    container_name: "${PROJECT_NAME}_portainer"
-    command: --no-auth -H unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - 'traefik.backend=portainer'
-      - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+  # portainer:
+  #   image: portainer/portainer
+  #   container_name: "${PROJECT_NAME}_portainer"
+  #   command: --no-auth -H unix:///var/run/docker.sock
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   labels:
+  #     - 'traefik.backend=portainer'
+  #     - 'traefik.port=9000'
+  #     - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
 
+  # traefik:
+  #   image: traefik
+  #   container_name: "${PROJECT_NAME}_traefik"
+  #   command: -c /dev/null --web --docker --logLevel=INFO
+  #   ports:
+  #     - '80:80'
+  #     # - '8080:8080' # Dashboard
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
   traefik:
-    image: traefik
-    container_name: "${PROJECT_NAME}_traefik"
-    command: -c /dev/null --web --docker --logLevel=INFO
-    ports:
-      - '80:80'
-      - '8080:8080' # Dashboard
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    external: true
