@@ -46,6 +46,8 @@ keep_files:
 aux_links:
   "DoS Docs on Github":
     - "//github.com/LBHackney-IT/DoS-docs"
+  "API Spec":
+    - "https://app.swaggerhub.com/apis/LBHC/lbh-co_l_directory_of_services_gateway_api/"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

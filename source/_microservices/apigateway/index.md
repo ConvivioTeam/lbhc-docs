@@ -41,6 +41,7 @@ This may be replaced if a faster method for retrieving events in the event strea
 
 ## API Spec doc
 
-View the spec at [SwaggerHub](https://app.swaggerhub.com/apis-docs/LBHC/lbh-co_l_directory_of_services_gateway_api/1.0.0)
+View the spec at [SwaggerHub](https://app.swaggerhub.com/apis-docs/LBHC/lbh-co_l_directory_of_services_gateway_api/)
 
 View the raw spec document at [https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml](https://github.com/LBHackney-IT/DoS-api-gateway/blob/master/docs/api/api-gateway.openapi.yml)
+
