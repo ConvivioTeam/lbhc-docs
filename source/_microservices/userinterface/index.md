@@ -2,7 +2,7 @@
 layout: default
 title: User Interface
 parent: Microservices
-has_children: true
+has_children: false
 nav_order: 4
 permalink: microservices/userinterface
 ---
