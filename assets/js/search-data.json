@@ -233,14 +233,14 @@
   "34": {
     "id": "34",
     "title": "About",
-    "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function together;  how to work with them;  how to deploy them.and more.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
+    "content": " this siteThis documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function, individually and together;  how to work with them;  how to deploy them.This documentation site is built with the Jekyll static site generator and uses the Just the Docs theme (documentation).",
     "url": "/about/",
     "relUrl": "/about/"
   },
   "35": {
     "id": "35",
     "title": "Home",
-    "content": "Hackney &amp;amp; City Directory of Services DocumentationThis is the documentation site for the Hackney &amp;amp; City Directory of Services system.The system is designed with a microservices architecture of loosely coupled services for performance, resilience and effective future-proofing.            Microservices        Documentation on the microservices in the DoS architecture.                Infrastructure        Documentation on deploying the system to a production environment.    ",
+    "content": "Hackney &amp;amp; City Directory of Services DocumentationThis is the documentation site for the Hackney &amp;amp; City Directory of Services system.The system is designed with a microservices architecture of loosely coupled services for performance, resilience and effective future-proofing.            Microservices        Documentation on the microservices in the DoS architecture.                Infrastructure        Documentation on deploying the system to a production environment.    This documentation site is intended for:  System builders creating a Directory of Services for Hackney &amp;amp; City of London councils.  Developers, adding or improving microservices to the system.It documents:  the components of the system;  how they function, individually and together;  how to work with them;  how to deploy them.",
     "url": "/",
     "relUrl": "/"
   }
