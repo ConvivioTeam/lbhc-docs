@@ -3,7 +3,7 @@ layout: default
 title: Data Store
 parent: Microservices
 has_children: true
-nav_order: 3
+nav_order: 2
 permalink: microservices/datastore
 ---
 # Data Store Microservice
@@ -21,6 +21,9 @@ Contains data for:
 - **[Venues](/microservices/datastore/venues)**
 - **[Taxonomy](/microservices/datastore/taxonomy)**
 - **[Taxonomy Reference](/microservices/datastore/taxonomy_ref)**
+
+{: .alert .alert-warning }
+Currently, for the purposes of technical experimentation during Alpha, data for all entities is stored in this single microservice. During Beta, this should be split up into distinct microservices for each entity, since each has a distinct and unique set of logic for handling the entity data.
 
 ## Repository
 

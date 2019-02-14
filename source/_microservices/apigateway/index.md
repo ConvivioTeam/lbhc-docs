@@ -7,13 +7,13 @@ permalink: microservices/apigateway
 ---
 # API Gateway microservice
 
-The API Gateway microservice provides the interface from the public internet into the Directory of Services system. Its main function is handle RESTful requests from outside the system, pass the request (and associated data, as appropriate) into the event stream, and then consume appropriate response(s) in the event stream and handle sending that back in the HTTP reponse.
+The API Gateway microservice provides the interface from the public internet into the Directory of Services system. Its main function is handle RESTful requests from outside the system, pass the request (and associated data, as appropriate) into the event stream, and then consume appropriate response events in the event stream and handle sending that back in the HTTP reponse.
 
 Endpoints are designed to be simple and easy to understand following a standard design pattern:
 
-* Endpoints should be plural e.g. ```providers```
-* Each endpoint must support GET POST and PUT requests
-* When returning data from the response it should contain the full data object including any updates
+* API Endpoints should be singular e.g. `/provider` or `/provider/{id}`.
+* Each endpoint must support GET, POST and PUT requests.
+* When returning data to a request, the response should contain the full data object, including any updates.
 
 ## Repository
 
