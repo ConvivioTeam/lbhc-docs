@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Data Store - Hackney & City Directory of Services Documentation</title>
+    <title>Event Sourcing - Hackney & City Directory of Services Documentation</title>
     <link rel="stylesheet" href="/assets/css/just-the-docs.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
@@ -74,6 +74,14 @@
             
         
         
+        
+            
+        
+        
+        
+        
+        
+            
         
         
         
@@ -144,20 +152,14 @@
         
         
             
-        
-        
-        
-            
-        
-        
-        
-            
-            <li class="navigation-list-item">
+            <li class="navigation-list-item active">
                 
                 <a href="/microservices" class="navigation-list-link">Microservices</a>
                 
                 
                 <ul class="navigation-list-child-list ">
+                    
+                    
                     
                     
                     
@@ -198,115 +200,6 @@
                     
                     
                     
-                    
-                    
-                        <li class="navigation-list-item ">
-                        
-                        <a href="/microservices/eventstream" class="navigation-list-link">Event Stream</a>
-                        
-                            
-                            <ul class="navigation-list-child-list">
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                                
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                                
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                            
-                                
-                                
-                                
-                            
-                            </ul>
-                        
-                        </li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                         <li class="navigation-list-item  active">
                         
                         <a href="/microservices/datastore" class="navigation-list-link">Data Store</a>
@@ -320,6 +213,15 @@
                             
                                 
                             
+                                
+                            
+                                
+                                
+                                <li class="navigation-list-item  active">
+                                    <a href="/microservices/datastore/eventsourcing" class="navigation-list-link active">Event Sourcing</a>
+                                    
+                                </li>
+                                
                                 
                             
                                 
@@ -376,6 +278,8 @@
                                 
                             
                                 
+                            
+                                
                                 
                                 <li class="navigation-list-item ">
                                     <a href="/microservices/datastore/contacts" class="navigation-list-link">Contacts</a>
@@ -400,17 +304,6 @@
                                     
                                 </li>
                                 
-                                
-                            
-                                
-                                
-                                <li class="navigation-list-item  active">
-                                    <a href="/microservices/datastore/eventsourcing" class="navigation-list-link active">Data Store</a>
-                                    
-                                </li>
-                                
-                                
-                            
                                 
                             
                                 
@@ -462,6 +355,113 @@
                     
                     
                     
+                        <li class="navigation-list-item ">
+                        
+                        <a href="/microservices/eventstream" class="navigation-list-link">Event Stream</a>
+                        
+                            
+                            <ul class="navigation-list-child-list">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                
+                                
+                            
+                            </ul>
+                        
+                        </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -494,13 +494,13 @@
                                 
                             
                                 
-                                
-                                
                             
                                 
                                 
                                 
                             
+                                
+                                
                                 
                             
                                 
@@ -630,6 +630,10 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                         <li class="navigation-list-item ">
                         
                         <a href="/infrastructure/ci-cd-pipeline.html" class="navigation-list-link">CI/CD Pipeline</a>
@@ -659,10 +663,6 @@
                         <a href="/infrastructure/secrets-management.html" class="navigation-list-link">Secrets Management</a>
                         
                         </li>
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -733,14 +733,97 @@
       <div class="main-content">
         
           
+          
+          
+          
+          
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices">Microservices</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><a href="/microservices/datastore">Data Store</a></li>
+                <li class="breadcrumb-nav-list-item"><span>Event Sourcing</span></li>
+              </ol>
+            </nav>
+          
         
         <div class="page-content">
-          <h1 id="data-store-event-sourcing">Data store: event sourcing</h1>
+          <h1 id="data-store-event-sourcing">Data Store: Event Sourcing</h1>
 
 <p>The Data Store microservice is built with <a href="https://lumen.laravel.com">Laravel Lumen</a>. It is a small PHP application.</p>
 
-<p>The data store microservice uses <a href="https://lumen.laravel.com/docs/5.7/queues">Laravel queues in Lumen</a> to source jobs from the <a href="/microservices/eventstream">event store microservice</a>.</p>
+<p>The Data Store microservice uses <a href="https://lumen.laravel.com/docs/5.7/queues">Laravel queues in Lumen</a> to source jobs from the <a href="/microservices/eventstream">event store microservice</a>.</p>
 
+<h2 id="apache-kafka-integration">Apache Kafka integration</h2>
+
+<p>The Data Store uses a <a href="https://github.com/rapideinternet/laravel-queue-kafka">Kafka Queue driver for Laravel</a> to source events from Apache Kafka. The driver library includes a Laravel service provider to create queue jobs sourced from events in Kafka.</p>
+
+<p>The following is included in <code class="highlighter-rouge">bootstrap/app.php</code>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">register</span><span class="p">(</span><span class="nx">Rapide\LaravelQueueKafka\LumenQueueKafkaServiceProvider</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="kafka-queue-configuration">Kafka queue configuration</h3>
+
+<p>The app must be configured correctly for the Laravel queue service provider to connect to Kafka.</p>
+
+<p>Consequently, there is copy the whole of <code class="highlighter-rouge">{vendor_path}/laravel/lumen-framework/config/queue.php</code> at <code class="highlighter-rouge">config/queue.php</code>.</p>
+
+<p>Secondly, the file <code class="highlighter-rouge">config/kafka.php</code> extends the queue configurations with the following contents:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="sd">/**
+ * Kafka queue connection config.
+ */</span>
+
+<span class="k">return</span> <span class="p">[</span>
+    <span class="s1">'connections'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">'kafka'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">'driver'</span> <span class="o">=&gt;</span> <span class="s1">'kafka'</span><span class="p">,</span>
+            <span class="s1">'queue'</span> <span class="o">=&gt;</span> <span class="nx">env</span><span class="p">(</span><span class="s1">'KAFKA_QUEUE'</span><span class="p">,</span> <span class="s1">'store'</span><span class="p">),</span>
+            <span class="s1">'consumer_group_id'</span> <span class="o">=&gt;</span> <span class="nx">env</span><span class="p">(</span><span class="s1">'KAFKA_CONSUMER_GROUP_ID'</span><span class="p">,</span> <span class="s1">'dos_data_store'</span><span class="p">),</span>
+            <span class="s1">'brokers'</span> <span class="o">=&gt;</span> <span class="nx">env</span><span class="p">(</span><span class="s1">'KAFKA_BROKERS'</span><span class="p">,</span> <span class="s1">'localhost'</span><span class="p">),</span>
+            <span class="s1">'sleep_on_error'</span> <span class="o">=&gt;</span> <span class="nx">env</span><span class="p">(</span><span class="s1">'KAFKA_ERROR_SLEEP'</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+            <span class="s1">'sleep_on_deadlock'</span> <span class="o">=&gt;</span> <span class="nx">env</span><span class="p">(</span><span class="s1">'KAFKA_DEADLOCK_SLEEP'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<p>The values will be populated from the environment variables.</p>
+
+<h2 id="running-the-queue-worker">Running the queue worker</h2>
+
+<p>The <a href="https://laravel.com/docs/5.7/queues#running-the-queue-worker">queue worker</a> must be running for the Data Store to source events and create jobs.</p>
+
+<p class="alert alert-info">Since queue workers are long-lived processes, they will not pick up changes to your code without being restarted. So, the simplest way to deploy an application using queue workers is to restart the workers during your deployment process.</p>
+
+<p>You may gracefully restart all of the workers by issuing the queue:restart command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan queue:restart
+</code></pre></div></div>
+
+<h3 id="in-production">In production</h3>
+
+<p>To keep the <code class="highlighter-rouge">queue:work process</code> running permanently in the background, you should use a process monitor such as <a href="https://laravel.com/docs/5.7/queues#supervisor-configuration">Supervisor</a> to ensure that the queue worker does not stop running.</p>
+
+<h3 id="in-local-development">In local development</h3>
+
+<p>In local development, you can get a shell inside the PHP container easily:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make shell
+</code></pre></div></div>
+
+<p>Once inside a shell on the PHP container, move into the correct directory and run the queue worker:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ./source
+php artisan queue:work kafka
+</code></pre></div></div>
+
+<p class="alert alert-info">Note that once the <code class="highlighter-rouge">queue:work</code> command has started, it will continue to run until it is manually stopped or you close your terminal.</p>
 
 
           
